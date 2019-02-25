@@ -1,6 +1,14 @@
 spring:
   application:
     name: service-person
+  datasource:
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/homework
+  jooq:
+    sql-dialect: mysql
+
 eureka:
   client:
     service-url:
