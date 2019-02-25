@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: service-person
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+  instance:
+    instance-id: service-person
+    prefer-ip-address: true
