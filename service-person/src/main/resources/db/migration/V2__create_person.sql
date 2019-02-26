@@ -1,0 +1,1 @@
+ALTER TABLE person MODIFY  card_num VARCHAR(18) NOT NULL comment '证件号码';

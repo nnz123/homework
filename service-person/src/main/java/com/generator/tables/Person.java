@@ -38,7 +38,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Person extends TableImpl<PersonRecord> {
 
-    private static final long serialVersionUID = 1055902462;
+    private static final long serialVersionUID = 1284775302;
 
     /**
      * The reference instance of <code>homework.person</code>
@@ -71,7 +71,7 @@ public class Person extends TableImpl<PersonRecord> {
     /**
      * The column <code>homework.person.card_num</code>. 证件号码
      */
-    public final TableField<PersonRecord, String> CARD_NUM = createField("card_num", org.jooq.impl.SQLDataType.VARCHAR.length(11).nullable(false), this, "证件号码");
+    public final TableField<PersonRecord, String> CARD_NUM = createField("card_num", org.jooq.impl.SQLDataType.VARCHAR.length(18).nullable(false), this, "证件号码");
 
     /**
      * The column <code>homework.person.person_picture</code>. 员工头像
@@ -121,7 +121,7 @@ public class Person extends TableImpl<PersonRecord> {
     /**
      * The column <code>homework.person.delete_flag</code>. 删除标记
      */
-    public final TableField<PersonRecord, Byte> DELETE_FLAG = createField("delete_flag", org.jooq.impl.SQLDataType.TINYINT, this, "删除标记");
+    public final TableField<PersonRecord, Byte> DELETE_FLAG = createField("delete_flag", org.jooq.impl.SQLDataType.TINYINT.defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.TINYINT)), this, "删除标记");
 
     /**
      * Create a <code>homework.person</code> table reference
