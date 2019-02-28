@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1428bdd2-2470-458d-bcb2-0f2d448a8fe0" name="Default Changelist" comment="eureka server 和 eureka client 已经实现，能够注册">
-      <change afterPath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonDeleteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/client/PersonDeleteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonDeleteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/PersonDeleteDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonDeleteDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/PersonDeleteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-person/src/main/resources/db/migration/V5__create_person.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_unknown.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_unknown.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-person/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-person/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonInsertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonInsertController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/client/PersonInsertService.java" beforeDir="false" afterPath="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/client/PersonInsertService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonInsertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonInsertController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/PersonInsertDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/PersonInsertDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonInsertDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonInsertDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/PersonInsertService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/PersonInsertService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonDeleteDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonDeleteDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonInsertServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonInsertServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/generator/tables/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/generator/tables/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/generator/tables/daos/PersonDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/generator/tables/daos/PersonDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/generator/tables/pojos/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/generator/tables/pojos/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/generator/tables/records/PersonRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/generator/tables/records/PersonRecord.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/api-person/target/" />
     <ignored path="$PROJECT_DIR$/eureka-server/target/" />
@@ -67,7 +47,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="4" />
-          <entry key="java" value="193" />
+          <entry key="java" value="194" />
           <entry key="pom" value="3" />
           <entry key="properties" value="3" />
           <entry key="sql" value="22" />
@@ -78,7 +58,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="4" />
-          <entry key="JAVA" value="193" />
+          <entry key="JAVA" value="194" />
           <entry key="Properties" value="3" />
           <entry key="SQL" value="22" />
           <entry key="XML" value="38" />
@@ -88,7 +68,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="84" />
-          <entry key="java" value="9029" />
+          <entry key="java" value="9070" />
           <entry key="sql" value="254" />
           <entry key="txt" value="51" />
           <entry key="xml" value="329" />
@@ -97,7 +77,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9029" />
+          <entry key="JAVA" value="9070" />
           <entry key="PLAIN_TEXT" value="135" />
           <entry key="SQL" value="254" />
           <entry key="XML" value="329" />
@@ -108,7 +88,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonDeleteDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="188">
@@ -120,10 +100,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonDeleteServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
+            <state relative-caret-position="513">
               <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -147,20 +127,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonInsertServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="242">
+              <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/PersonInsertDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -177,10 +148,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonDeleteController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+            <state relative-caret-position="128">
+              <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#816#817#0" expanded="true" />
+                <element signature="e#866#867#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -189,8 +162,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonDeleteController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+            <state relative-caret-position="204">
+              <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -201,8 +174,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonInsertController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+            <state relative-caret-position="114">
+              <caret line="50" column="17" lean-forward="true" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/PersonInsertService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="33">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -290,14 +275,14 @@
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/PersonDeleteDao.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonInsertDaoImpl.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/PersonInsertDao.java" />
-        <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonInsertServiceImpl.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/PersonInsertService.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonInsertController.java" />
         <option value="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/client/PersonDeleteService.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/PersonDeleteService.java" />
         <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonDeleteController.java" />
-        <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonDeleteController.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonDeleteServiceImpl.java" />
+        <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonDeleteController.java" />
+        <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonInsertServiceImpl.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonDeleteDaoImpl.java" />
       </list>
     </option>
@@ -1072,7 +1057,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551341564493" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551342220080" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../practice-work" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -1101,7 +1086,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ApiPersonApplication">
+  <component name="RunManager" selected="Spring Boot.ServicePersonApplication">
     <configuration name="ApiPersonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="api-person" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ccbtrust.apiperson.ApiPersonApplication" />
@@ -1165,12 +1150,12 @@
       <workItem from="1551150230436" duration="10441000" />
       <workItem from="1551162746679" duration="65651000" />
       <workItem from="1551334293610" duration="490000" />
-      <workItem from="1551334837026" duration="6561000" />
+      <workItem from="1551334837026" duration="7282000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112077000" />
+    <option name="totallyTimeSpent" value="112798000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1186,7 +1171,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32840723" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.42692938" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.41379312" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3464696" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1445,16 +1430,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/PersonInsertService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonInsertController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
@@ -1495,12 +1470,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonInsertController.java">
+    <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonInsertDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+        <state relative-caret-position="141">
+          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonDeleteController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#816#817#0" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1517,18 +1504,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonDeleteController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+        <state relative-caret-position="204">
+          <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonDeleteController.java">
+    <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonInsertController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+        <state relative-caret-position="114">
+          <caret line="50" column="17" lean-forward="true" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/PersonInsertService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonDeleteServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1537,18 +1544,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonInsertServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonInsertDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="242">
+          <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1559,16 +1556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
           <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonDeleteServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
