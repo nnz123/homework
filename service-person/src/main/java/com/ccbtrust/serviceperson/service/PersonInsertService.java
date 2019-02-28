@@ -2,9 +2,6 @@ package com.ccbtrust.serviceperson.service;
 
 
 import com.ccbtrust.remoteclient.model.PersonInsertDTO;
-import org.springframework.web.multipart.MultipartFile;
-
-import java.io.InputStream;
 import java.util.Map;
 
 /**
@@ -19,11 +16,7 @@ public interface PersonInsertService {
      */
      Map<String,Object> insert(PersonInsertDTO personInsertDTO);
 
-    /**
-     * 通过id删除员工
-     * @param id 员工id
-     */
-    void deleteById(int id);
+
 
 
 

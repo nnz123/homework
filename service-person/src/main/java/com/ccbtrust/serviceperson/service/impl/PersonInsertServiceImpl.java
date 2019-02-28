@@ -19,13 +19,13 @@ import java.util.Map;
 public class PersonInsertServiceImpl implements PersonInsertService {
 
     @Autowired
-    private PersonInsertDao personDao;
+    private PersonInsertDao personInsertDao;
 
     @Override
     public Map<String, Object> insert(PersonInsertDTO personInsertDTO) {
         Map<String, Object> map = new HashMap<>(16);
         try {
-            int effectNum = personDao.insert(personInsertDTO);
+            int effectNum = personInsertDao.insert(personInsertDTO);
             if (effectNum <= 0) {
                 throw new PersonException("添加员工失败");
             }
@@ -36,10 +36,5 @@ public class PersonInsertServiceImpl implements PersonInsertService {
         map.put("message", "添加员工成功");
         return map;
     }
-
-    @Override
-    public void deleteById(int id) {
-        personDao.deleteById(id);
-    }
-
+    
 }

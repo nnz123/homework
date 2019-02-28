@@ -23,7 +23,7 @@ import javax.annotation.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Person implements Serializable {
 
-    private static final long serialVersionUID = 485940616;
+    private static final long serialVersionUID = -1521722684;
 
     private Integer       id;
     private String        personName;
@@ -38,7 +38,7 @@ public class Person implements Serializable {
     private LocalDateTime editTime;
     private String        deletePerson;
     private LocalDateTime deleteTime;
-    private Byte          deleteFlag;
+    private Integer       deleteFlag;
 
     public Person() {}
 
@@ -73,7 +73,7 @@ public class Person implements Serializable {
         LocalDateTime editTime,
         String        deletePerson,
         LocalDateTime deleteTime,
-        Byte          deleteFlag
+        Integer       deleteFlag
     ) {
         this.id = id;
         this.personName = personName;
@@ -195,11 +195,11 @@ public class Person implements Serializable {
         this.deleteTime = deleteTime;
     }
 
-    public Byte getDeleteFlag() {
+    public Integer getDeleteFlag() {
         return this.deleteFlag;
     }
 
-    public void setDeleteFlag(Byte deleteFlag) {
+    public void setDeleteFlag(Integer deleteFlag) {
         this.deleteFlag = deleteFlag;
     }
 

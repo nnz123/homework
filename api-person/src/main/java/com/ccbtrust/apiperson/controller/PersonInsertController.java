@@ -7,7 +7,6 @@ import com.ccbtrust.remoteclient.util.ImageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
@@ -21,7 +20,13 @@ public class PersonInsertController {
     @Autowired
     private PersonInsertService personInsertService;
 
-    
+
+    /**
+     * 添加员工共信息并上传图片 参数为request
+     * @param mImage 上传的图像
+     * @param personInsertVO  插入员工的VO
+     * @return 返回操作是否成功等信息
+     */
     @RequestMapping(value = "/person/insert", method = RequestMethod.POST)
     public Map<String, Object> insert(@RequestParam(value = "mImage") MultipartFile mImage, PersonInsertVO personInsertVO) {
         Map<String, Object> map = new HashMap<>(16);
@@ -55,20 +60,6 @@ public class PersonInsertController {
         map.put("message", "添加person成功");
         return map;
     }
-
-
-
-
-    /**
-     * 根据id 删除信息
-     *
-     * @param id 员工id
-     */
-    @RequestMapping(value = "/person/delete/{id}")
-    public void deleteById(@PathVariable("id") int id) {
-        personInsertService.deleteById(id);
-    }
-
 
 
 

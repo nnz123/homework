@@ -152,7 +152,7 @@ public class PersonDao extends DAOImpl<PersonRecord, com.generator.tables.pojos.
     /**
      * Fetch records that have <code>delete_flag IN (values)</code>
      */
-    public List<com.generator.tables.pojos.Person> fetchByDeleteFlag(Byte... values) {
+    public List<com.generator.tables.pojos.Person> fetchByDeleteFlag(Integer... values) {
         return fetch(Person.PERSON.DELETE_FLAG, values);
     }
 }

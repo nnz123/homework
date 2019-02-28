@@ -19,12 +19,7 @@ public interface PersonInsertService {
     @RequestMapping(value = "/insert",method = RequestMethod.POST)
     void insert(@RequestBody PersonInsertDTO personInsertDTO);
 
-    /**
-     * 通过id删除员工信息
-     * @param id 员工id
-     */
-    @RequestMapping(value = "/delete/{id}",method = RequestMethod.GET)
-    void deleteById(@PathVariable("id") int id);
+
 
 
 }

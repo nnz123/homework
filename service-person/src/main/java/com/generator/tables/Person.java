@@ -36,7 +36,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Person extends TableImpl<PersonRecord> {
 
-    private static final long serialVersionUID = 1657159744;
+    private static final long serialVersionUID = -925466248;
 
     /**
      * The reference instance of <code>homework.person</code>
@@ -119,7 +119,7 @@ public class Person extends TableImpl<PersonRecord> {
     /**
      * The column <code>homework.person.delete_flag</code>. 删除标记
      */
-    public final TableField<PersonRecord, Byte> DELETE_FLAG = createField("delete_flag", org.jooq.impl.SQLDataType.TINYINT.defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.TINYINT)), this, "删除标记");
+    public final TableField<PersonRecord, Integer> DELETE_FLAG = createField("delete_flag", org.jooq.impl.SQLDataType.INTEGER.defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "删除标记");
 
     /**
      * Create a <code>homework.person</code> table reference
