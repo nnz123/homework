@@ -32,11 +32,6 @@
     </dependencyManagement>
 
     <dependencies>
-    <!--    <dependency>
-            <groupId>com.ccbtrust</groupId>
-            <artifactId>service-person</artifactId>
-            <version>${project.version}</version>
-        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -54,6 +49,22 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-feign</artifactId>
         </dependency>
+
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.18</version>
+        </dependency>
+
+        <!-- 图片处理 -->
+        <dependency>
+            <groupId>net.coobird</groupId>
+            <artifactId>thumbnailator</artifactId>
+            <version>0.4.8</version>
+        </dependency>
+
+
     </dependencies>
 
 

@@ -32,6 +32,11 @@
     </dependencyManagement>
 
     <dependencies>
+        <dependency>
+            <groupId>com.ccbtrust</groupId>
+            <artifactId>remote-client</artifactId>
+            <version>${project.version}</version>
+        </dependency>
 
         <dependency><!-- 自己定义的api -->
             <groupId>com.ccbtrust</groupId>
@@ -50,7 +55,6 @@
             <scope>test</scope>
         </dependency>
 
-
         <!--Feign相关-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -67,6 +71,15 @@
             <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
 
+        <!--springfox-swagger2 -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+        </dependency>
 
 
 

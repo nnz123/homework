@@ -6,8 +6,6 @@ package com.generator.tables;
 
 import com.generator.Homework;
 import com.generator.Keys;
-import com.generator.enums.PersonCardType;
-import com.generator.enums.PersonPersonStatus;
 import com.generator.tables.records.PersonRecord;
 
 import java.time.LocalDateTime;
@@ -38,7 +36,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Person extends TableImpl<PersonRecord> {
 
-    private static final long serialVersionUID = 1284775302;
+    private static final long serialVersionUID = 1657159744;
 
     /**
      * The reference instance of <code>homework.person</code>
@@ -66,7 +64,7 @@ public class Person extends TableImpl<PersonRecord> {
     /**
      * The column <code>homework.person.card_type</code>. 员工证件类型0身份证1护照
      */
-    public final TableField<PersonRecord, PersonCardType> CARD_TYPE = createField("card_type", org.jooq.util.mysql.MySQLDataType.VARCHAR.asEnumDataType(com.generator.enums.PersonCardType.class), this, "员工证件类型0身份证1护照");
+    public final TableField<PersonRecord, Integer> CARD_TYPE = createField("card_type", org.jooq.impl.SQLDataType.INTEGER.defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "员工证件类型0身份证1护照");
 
     /**
      * The column <code>homework.person.card_num</code>. 证件号码
@@ -86,7 +84,7 @@ public class Person extends TableImpl<PersonRecord> {
     /**
      * The column <code>homework.person.person_status</code>. 0在职，1 离职
      */
-    public final TableField<PersonRecord, PersonPersonStatus> PERSON_STATUS = createField("person_status", org.jooq.util.mysql.MySQLDataType.VARCHAR.asEnumDataType(com.generator.enums.PersonPersonStatus.class), this, "0在职，1 离职");
+    public final TableField<PersonRecord, Integer> PERSON_STATUS = createField("person_status", org.jooq.impl.SQLDataType.INTEGER.defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "0在职，1 离职");
 
     /**
      * The column <code>homework.person.create_person</code>. 员工信息创建人
@@ -96,7 +94,7 @@ public class Person extends TableImpl<PersonRecord> {
     /**
      * The column <code>homework.person.create_time</code>. 员工信息创建时间
      */
-    public final TableField<PersonRecord, LocalDateTime> CREATE_TIME = createField("create_time", org.jooq.impl.SQLDataType.LOCALDATETIME, this, "员工信息创建时间");
+    public final TableField<PersonRecord, LocalDateTime> CREATE_TIME = createField("create_time", org.jooq.impl.SQLDataType.LOCALDATETIME.nullable(false).defaultValue(org.jooq.impl.DSL.inline("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.LOCALDATETIME)), this, "员工信息创建时间");
 
     /**
      * The column <code>homework.person.edit_person</code>. 员工信息修改人

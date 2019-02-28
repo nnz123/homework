@@ -33,6 +33,12 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>com.ccbtrust</groupId>
+            <artifactId>remote-client</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
         <!--spring boot-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

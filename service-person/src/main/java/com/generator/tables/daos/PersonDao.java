@@ -4,8 +4,6 @@
 package com.generator.tables.daos;
 
 
-import com.generator.enums.PersonCardType;
-import com.generator.enums.PersonPersonStatus;
 import com.generator.tables.Person;
 import com.generator.tables.records.PersonRecord;
 
@@ -77,7 +75,7 @@ public class PersonDao extends DAOImpl<PersonRecord, com.generator.tables.pojos.
     /**
      * Fetch records that have <code>card_type IN (values)</code>
      */
-    public List<com.generator.tables.pojos.Person> fetchByCardType(PersonCardType... values) {
+    public List<com.generator.tables.pojos.Person> fetchByCardType(Integer... values) {
         return fetch(Person.PERSON.CARD_TYPE, values);
     }
 
@@ -105,7 +103,7 @@ public class PersonDao extends DAOImpl<PersonRecord, com.generator.tables.pojos.
     /**
      * Fetch records that have <code>person_status IN (values)</code>
      */
-    public List<com.generator.tables.pojos.Person> fetchByPersonStatus(PersonPersonStatus... values) {
+    public List<com.generator.tables.pojos.Person> fetchByPersonStatus(Integer... values) {
         return fetch(Person.PERSON.PERSON_STATUS, values);
     }
 

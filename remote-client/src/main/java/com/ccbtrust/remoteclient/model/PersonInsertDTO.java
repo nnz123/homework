@@ -1,19 +1,18 @@
-package com.ccbtrust.serviceperson.entity;
+package com.ccbtrust.remoteclient.model;
 
-import com.generator.enums.PersonCardType;
-import com.generator.enums.PersonPersonStatus;
 import lombok.Data;
-
 
 /**
  * @author nzhang
  */
 @Data
-public class PersonInsert {
+public class PersonInsertDTO {
+
     private String             personName;
-    private PersonCardType     cardType;
+    private Integer            cardType;
     private String             cardNum;
     private String             personPicture;
     private String             phoneNum;
     private String             createPerson;
+
 }

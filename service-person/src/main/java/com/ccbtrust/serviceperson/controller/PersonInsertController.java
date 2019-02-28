@@ -1,7 +1,8 @@
 package com.ccbtrust.serviceperson.controller;
 
-import com.ccbtrust.serviceperson.entity.PersonInsert;
-import com.ccbtrust.serviceperson.service.PersonService;
+
+import com.ccbtrust.remoteclient.model.PersonInsertDTO;
+import com.ccbtrust.serviceperson.service.PersonInsertService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,13 +10,13 @@ import org.springframework.web.bind.annotation.*;
  * @author nzhang
  */
 @RestController
-public class PersonController {
+public class PersonInsertController {
     @Autowired
-    private PersonService personService;
+    private PersonInsertService personService;
 
     @RequestMapping(value = "/insert",method = RequestMethod.POST)
-    public void insert(@RequestBody  PersonInsert personInsert){
-        personService.insert(personInsert);
+    public void insert(@RequestBody PersonInsertDTO personInsertDTO){
+        personService.insert(personInsertDTO);
     }
 
     @RequestMapping(value = "/delete/{id}",method =RequestMethod.GET)
