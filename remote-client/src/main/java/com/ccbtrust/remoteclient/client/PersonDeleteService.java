@@ -16,6 +16,6 @@ public interface PersonDeleteService {
      * 通过id删除员工信息
      * @param id 员工id
      */
-    @RequestMapping(value = "/delete/{id}",method = RequestMethod.GET)
+    @RequestMapping(value = "/delete/{id}",method = RequestMethod.DELETE)
     void deleteById(@PathVariable("id") int id);
 }

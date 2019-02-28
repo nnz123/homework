@@ -14,7 +14,7 @@ public interface PersonInsertService {
      * @return 反回插入的行数
      *
      */
-     Map<String,Object> insert(PersonInsertDTO personInsertDTO);
+     void insert(PersonInsertDTO personInsertDTO);
 
 
 

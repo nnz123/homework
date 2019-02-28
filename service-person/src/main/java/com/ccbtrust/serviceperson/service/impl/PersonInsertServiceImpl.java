@@ -22,8 +22,7 @@ public class PersonInsertServiceImpl implements PersonInsertService {
     private PersonInsertDao personInsertDao;
 
     @Override
-    public Map<String, Object> insert(PersonInsertDTO personInsertDTO) {
-        Map<String, Object> map = new HashMap<>(16);
+    public void insert(PersonInsertDTO personInsertDTO) {
         try {
             int effectNum = personInsertDao.insert(personInsertDTO);
             if (effectNum <= 0) {
@@ -32,9 +31,6 @@ public class PersonInsertServiceImpl implements PersonInsertService {
         }catch (Exception e){
             throw new PersonException(e.getMessage());
         }
-        map.put("success", true);
-        map.put("message", "添加员工成功");
-        return map;
     }
 
 }

@@ -1,6 +1,6 @@
 package com.ccbtrust.serviceperson.dao.impl;
 
-import com.ccbtrust.remoteclient.exception.PersonException;
+
 import com.ccbtrust.serviceperson.dao.PersonDeleteDao;
 import org.jooq.DSLContext;
 import org.springframework.beans.factory.annotation.Autowired;

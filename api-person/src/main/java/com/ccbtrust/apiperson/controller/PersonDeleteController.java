@@ -24,7 +24,7 @@ public class PersonDeleteController {
      *
      * @param id 员工id
      */
-    @RequestMapping(value = "/person/delete/{id}",method = RequestMethod.GET)
+    @RequestMapping(value = "/person/delete/{id}",method = RequestMethod.DELETE)
     public Map<String,Object> deleteById(@PathVariable("id") int id) {
         Map<String,Object> map = new HashMap<>();
         try {
