@@ -17,9 +17,8 @@ public class PersonLeaveServiceImpl implements PersonLeaveService {
 
     @Override
     public void leave(int id,String editPerson) {
-        int effectNum;
         try {
-            effectNum = personLeaveDao.leave(id,editPerson);
+            int  effectNum = personLeaveDao.leave(id,editPerson);
             if (effectNum<=0){
                 throw new PersonException("更改员工状态失败");
             }

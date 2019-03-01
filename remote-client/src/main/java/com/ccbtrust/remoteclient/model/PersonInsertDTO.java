@@ -3,6 +3,7 @@ package com.ccbtrust.remoteclient.model;
 import lombok.Data;
 
 /**
+ * 增加员工DTO
  * @author nzhang
  */
 @Data
