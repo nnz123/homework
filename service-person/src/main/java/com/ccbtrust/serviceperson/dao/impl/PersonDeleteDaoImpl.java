@@ -19,8 +19,8 @@ public class PersonDeleteDaoImpl implements PersonDeleteDao {
    private DSLContext dslContext;
 
     @Override
-    public int deleteById(int id) {
-         int effectNum = dslContext.update(PERSON).set(PERSON.DELETE_FLAG,1).set(PERSON.DELETE_PERSON,"Tom").set(PERSON.DELETE_TIME, LocalDateTime.now()).where(PERSON.ID.eq(id)).execute();
+    public int deleteById(int id,String deletePerson) {
+         int effectNum = dslContext.update(PERSON).set(PERSON.DELETE_FLAG,1).set(PERSON.DELETE_PERSON,deletePerson).set(PERSON.DELETE_TIME, LocalDateTime.now()).where(PERSON.ID.eq(id)).execute();
          return effectNum;
     }
 }

@@ -17,9 +17,10 @@ public class PersonDeleteServiceImpl implements PersonDeleteService {
     private PersonDeleteDao personDeleteDao;
 
     @Override
-    public void deleteById(int id){
-            int effectNum = personDeleteDao.deleteById(id);
+    public void deleteById(int id,String deletePerson){
+            int effectNum;
             try {
+                 effectNum = personDeleteDao.deleteById(id,deletePerson);
                 if (effectNum<=0){
                     throw new PersonException("删除员工出错");
                 }

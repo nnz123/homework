@@ -7,17 +7,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * 删除员工
+ * 员工离职
  * @author nzhang
  */
 @FeignClient(value = "service-person")
-public interface PersonDeleteService {
+public interface PersonLeaveService {
 
     /**
-     * 通过id删除员工信息
+     * y员工离职
      * @param id 员工id
-     * @param deletePerson 删除人姓名
+     * @param editPerson 编辑人姓名
      */
-    @RequestMapping(value = "/delete/{id}",method = RequestMethod.PUT)
-    void deleteById(@PathVariable("id") int id,@RequestParam("deletePerson") String deletePerson);
+    @RequestMapping(value = "/leave/{id}",method = RequestMethod.PUT)
+    void leave(@PathVariable("id") int id, @RequestParam("editPerson") String editPerson);
 }

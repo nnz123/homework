@@ -4,6 +4,8 @@ import com.ccbtrust.apiperson.model.PersonInsertVO;
 import com.ccbtrust.remoteclient.client.PersonInsertService;
 import com.ccbtrust.remoteclient.model.PersonInsertDTO;
 import com.ccbtrust.remoteclient.util.ImageUtil;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -27,8 +29,9 @@ public class PersonInsertController {
      * @param personInsertVO  插入员工的VO
      * @return 返回操作是否成功等信息
      */
+    @ApiOperation("添加员工信息")
     @RequestMapping(value = "/person/insert", method = RequestMethod.POST)
-    public Map<String, Object> insert(@RequestParam(value = "mImage") MultipartFile mImage, PersonInsertVO personInsertVO) {
+    public Map<String, Object> insert(@ApiParam("上传的头像") @RequestParam(value = "mImage") MultipartFile mImage,@ApiParam("员工基本信息personName,cardType, cardNum,phoneNum") PersonInsertVO personInsertVO) {
         Map<String, Object> map = new HashMap<>(16);
         String imageName = mImage.getOriginalFilename();
         String localImageAddr = ImageUtil.generateImageAddr(imageName);
@@ -48,6 +51,7 @@ public class PersonInsertController {
             personInsertDTO.setCardNum(personInsertVO.getCardNum());
             personInsertDTO.setPhoneNum(personInsertVO.getPhoneNum());
             personInsertDTO.setPersonPicture(localImageAddr);
+            personInsertDTO.setCreatePerson("Nancy");
             try {
                 personInsertService.insert(personInsertDTO);
             } catch (Exception e) {
