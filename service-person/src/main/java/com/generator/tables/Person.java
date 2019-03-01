@@ -36,7 +36,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Person extends TableImpl<PersonRecord> {
 
-    private static final long serialVersionUID = -925466248;
+    private static final long serialVersionUID = 149289577;
 
     /**
      * The reference instance of <code>homework.person</code>
@@ -94,7 +94,7 @@ public class Person extends TableImpl<PersonRecord> {
     /**
      * The column <code>homework.person.create_time</code>. 员工信息创建时间
      */
-    public final TableField<PersonRecord, LocalDateTime> CREATE_TIME = createField("create_time", org.jooq.impl.SQLDataType.LOCALDATETIME.nullable(false).defaultValue(org.jooq.impl.DSL.inline("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.LOCALDATETIME)), this, "员工信息创建时间");
+    public final TableField<PersonRecord, LocalDateTime> CREATE_TIME = createField("create_time", org.jooq.impl.SQLDataType.LOCALDATETIME, this, "员工信息创建时间");
 
     /**
      * The column <code>homework.person.edit_person</code>. 员工信息修改人

@@ -31,7 +31,7 @@ public class PersonInsertController {
      */
     @ApiOperation("添加员工信息")
     @RequestMapping(value = "/person/insert", method = RequestMethod.POST)
-    public Map<String, Object> insert(@ApiParam("上传的头像") @RequestParam(value = "mImage") MultipartFile mImage,@ApiParam("员工基本信息personName,cardType, cardNum,phoneNum") PersonInsertVO personInsertVO) {
+    public Map<String, Object> insert(@ApiParam(value = "上传的头像",required = true) @RequestParam(value = "mImage") MultipartFile mImage,@ApiParam("员工基本信息personName,cardType, cardNum,phoneNum") PersonInsertVO personInsertVO) {
         Map<String, Object> map = new HashMap<>(16);
         String imageName = mImage.getOriginalFilename();
         String localImageAddr = ImageUtil.generateImageAddr(imageName);

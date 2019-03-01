@@ -1,6 +1,8 @@
 package com.ccbtrust.apiperson.controller;
 
 import com.ccbtrust.remoteclient.client.PersonLeaveService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,8 +21,9 @@ public class PersonLeaveController {
     @Autowired
     private PersonLeaveService personLeaveService;
 
+    @ApiOperation("员工离职")
     @RequestMapping(value = "/person/leave/{id}",method = RequestMethod.PUT)
-    public Map<String,Object> leave(@PathVariable("id") int id){
+    public Map<String,Object> leave(@ApiParam("员工id") @PathVariable("id") int id){
         Map<String,Object> map = new HashMap<>(16);
         String editPerson = "Jack";
         try {

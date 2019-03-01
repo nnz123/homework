@@ -29,7 +29,7 @@ public class PersonDeleteController {
     @ApiOperation("根据id删除员工信息")
     @RequestMapping(value = "/person/delete/{id}",method = RequestMethod.PUT)
     public Map<String,Object> deleteById(@ApiParam("员工id") @PathVariable("id") int id) {
-        Map<String,Object> map = new HashMap<>();
+        Map<String,Object> map = new HashMap<>(16);
         String deletePerson = "Tom";
         try {
             personDeleteService.deleteById(id,deletePerson);
