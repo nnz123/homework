@@ -1,5 +1,7 @@
 package com.ccbtrust.serviceperson.dao;
 
+import com.ccbtrust.remoteclient.model.PersonUpdateDTO;
+
 /**
  * 更新员工信息
  * @author nzhang
@@ -12,4 +14,12 @@ public interface PersonUpdateDao {
      * @return
      */
     int uploadPicture(int id, String localPictureAddr);
+
+    /**
+     * 更新员工基本信息
+     * @param personUpdateDTO  员工基本信息DTO
+     * @return
+     */
+    int updatePersonInfo(PersonUpdateDTO personUpdateDTO);
+
 }

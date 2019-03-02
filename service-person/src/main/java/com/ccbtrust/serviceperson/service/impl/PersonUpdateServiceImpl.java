@@ -1,6 +1,7 @@
 package com.ccbtrust.serviceperson.service.impl;
 
 import com.ccbtrust.remoteclient.exception.PersonException;
+import com.ccbtrust.remoteclient.model.PersonUpdateDTO;
 import com.ccbtrust.serviceperson.dao.PersonUpdateDao;
 import com.ccbtrust.serviceperson.service.PersonUpdateService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,18 @@ public class PersonUpdateServiceImpl implements PersonUpdateService {
             }
         } catch (Exception e) {
             throw new PersonException(e.getMessage());
+        }
+    }
+
+    @Override
+    public void updatePersonInfo(PersonUpdateDTO personUpdateDTO) {
+        try {
+            int effectNum = personUpdateDao.updatePersonInfo(personUpdateDTO);
+            if (effectNum<=0){
+                throw new PersonException("更新员工信息失败");
+            }
+        } catch (Exception e) {
+            throw  new PersonException(e.getMessage());
         }
     }
 }

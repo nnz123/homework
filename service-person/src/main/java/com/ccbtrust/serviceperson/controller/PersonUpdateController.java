@@ -1,11 +1,9 @@
 package com.ccbtrust.serviceperson.controller;
 
+import com.ccbtrust.remoteclient.model.PersonUpdateDTO;
 import com.ccbtrust.serviceperson.service.PersonUpdateService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 更新员工信息
@@ -21,4 +19,11 @@ public class PersonUpdateController {
     public void updatePicture(@PathVariable("id") int id, String localPictureAddr){
         personUpdateService.uploadPicture(id,localPictureAddr);
     }
+
+    @RequestMapping(value = "/update/updatePersonInfo", method = RequestMethod.PUT)
+    public void updatePersonInfo(@RequestBody PersonUpdateDTO personUpdateDTO){
+        personUpdateService.updatePersonInfo(personUpdateDTO);
+    }
+
+
 }

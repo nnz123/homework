@@ -19,5 +19,5 @@ public interface PersonDeleteService {
      * @param deletePerson 删除人姓名
      */
     @RequestMapping(value = "/delete/{id}",method = RequestMethod.PUT)
-    void deleteById(@PathVariable("id") int id,@RequestParam("deletePerson") String deletePerson);
+    void deleteById(@PathVariable("id")int id,@RequestParam("deletePerson") String deletePerson);
 }

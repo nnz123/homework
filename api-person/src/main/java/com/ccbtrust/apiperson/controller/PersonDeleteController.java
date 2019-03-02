@@ -4,10 +4,7 @@ import com.ccbtrust.remoteclient.client.PersonDeleteService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,7 +25,7 @@ public class PersonDeleteController {
      */
     @ApiOperation("根据id删除员工信息")
     @RequestMapping(value = "/person/delete/{id}",method = RequestMethod.PUT)
-    public Map<String,Object> deleteById(@ApiParam("员工id") @PathVariable("id") int id) {
+    public Map<String,Object> deleteById(@ApiParam("员工id") @PathVariable("id")int id) {
         Map<String,Object> map = new HashMap<>(16);
         String deletePerson = "Tom";
         try {
