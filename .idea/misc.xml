@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
         <option value="$PROJECT_DIR$/remote-client/pom.xml" />
         <option value="$PROJECT_DIR$/service-person/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq-receiver/pom.xml" />
       </list>
     </option>
   </component>

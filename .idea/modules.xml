@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/api-person/api-person.iml" filepath="$PROJECT_DIR$/api-person/api-person.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/homework.iml" filepath="$PROJECT_DIR$/.idea/homework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq-receiver/rabbitmq-receiver.iml" filepath="$PROJECT_DIR$/rabbitmq-receiver/rabbitmq-receiver.iml" />
       <module fileurl="file://$PROJECT_DIR$/remote-client/remote-client.iml" filepath="$PROJECT_DIR$/remote-client/remote-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-person/service-person.iml" filepath="$PROJECT_DIR$/service-person/service-person.iml" />
     </modules>

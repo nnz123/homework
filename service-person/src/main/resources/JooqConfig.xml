@@ -21,6 +21,14 @@
             <includes>.*</includes>
             <!--数据库名称-->
             <inputSchema>homework</inputSchema>
+
+           <!-- <forcedTypes>
+                <forcedType>
+                    <name>ENUM</name>
+                    <expression>.*\.PERSON_STATUS</expression>
+                    <types>.*</types>
+                </forcedType>
+            </forcedTypes>-->
         </database>
 
         <generate>

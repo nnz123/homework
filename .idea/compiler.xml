@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="api-person" />
         <module name="eureka-server" />
+        <module name="rabbitmq-receiver" />
         <module name="remote-client" />
         <module name="service-person" />
       </profile>
@@ -15,6 +16,7 @@
     <bytecodeTargetLevel>
       <module name="api-person" target="1.8" />
       <module name="eureka-server" target="1.8" />
+      <module name="rabbitmq-receiver" target="1.8" />
       <module name="remote-client" target="1.8" />
       <module name="service-person" target="1.8" />
     </bytecodeTargetLevel>

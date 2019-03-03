@@ -2,33 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1428bdd2-2470-458d-bcb2-0f2d448a8fe0" name="Default Changelist" comment="eureka server 和 eureka client 已经实现，能够注册">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/config/SerializingConf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonSelectController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/model/PersonSelectConditionsVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/model/PersonSelectResultVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/client/PersonSelectService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/model/PersonSelectConditionsDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/model/PersonSelectResultDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonSelectController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/PersonSelectDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonSelectDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/PersonSelectService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonSelectServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/config/RabbitmqSenderConf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq-receiver/src/main/java/com/ccbtrust/rabbitmqreceiver/configuration/ReceiverConf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq-receiver/src/main/java/com/ccbtrust/rabbitmqreceiver/receive/LeaveReceive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq-receiver/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-person/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-person/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/ApiPersonApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/ApiPersonApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/config/Swagger2Conf.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/config/Swagger2Conf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/remote-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/remote-client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/PersonUpdateDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/PersonUpdateDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonUpdateDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonUpdateDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonLeaveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonLeaveController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-person/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-person/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-person/src/main/resources/JooqConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/resources/JooqConfig.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/api-person/target/" />
     <ignored path="$PROJECT_DIR$/eureka-server/target/" />
     <ignored path="$PROJECT_DIR$/remote-client/target/" />
     <ignored path="$PROJECT_DIR$/service-person/target/" />
+    <ignored path="$PROJECT_DIR$/rabbitmq-receiver/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,41 +65,41 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="4" />
-          <entry key="java" value="345" />
+          <entry key="java" value="355" />
           <entry key="pom" value="3" />
-          <entry key="properties" value="3" />
+          <entry key="properties" value="4" />
           <entry key="sql" value="27" />
-          <entry key="xml" value="44" />
-          <entry key="yml" value="7" />
+          <entry key="xml" value="47" />
+          <entry key="yml" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="4" />
-          <entry key="JAVA" value="345" />
-          <entry key="Properties" value="3" />
+          <entry key="JAVA" value="355" />
+          <entry key="Properties" value="4" />
           <entry key="SQL" value="27" />
-          <entry key="XML" value="47" />
-          <entry key="YAML" value="7" />
+          <entry key="XML" value="50" />
+          <entry key="YAML" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="111" />
-          <entry key="java" value="20780" />
+          <entry key="java" value="20969" />
           <entry key="sql" value="255" />
           <entry key="txt" value="51" />
-          <entry key="xml" value="361" />
-          <entry key="yml" value="278" />
+          <entry key="xml" value="432" />
+          <entry key="yml" value="319" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="20780" />
+          <entry key="JAVA" value="20969" />
           <entry key="PLAIN_TEXT" value="162" />
           <entry key="SQL" value="255" />
-          <entry key="XML" value="361" />
-          <entry key="YAML" value="278" />
+          <entry key="XML" value="432" />
+          <entry key="YAML" value="319" />
         </counts>
       </usages-collector>
     </session>
@@ -115,117 +107,105 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/model/PersonSelectResultDTO.java">
+        <entry file="file://$PROJECT_DIR$/rabbitmq-receiver/src/main/java/com/ccbtrust/rabbitmqreceiver/RabbitmqReceiverApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="26" column="37" lean-forward="true" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+            <state relative-caret-position="78">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#283#284#0" expanded="true" />
+                <element signature="e#361#362#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/PersonSelectDao.java">
+        <entry file="file://$PROJECT_DIR$/rabbitmq-receiver/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rabbitmq-receiver/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="37" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="114">
+              <caret line="30" column="21" lean-forward="true" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonSelectDaoImpl.java">
+        <entry file="file://$PROJECT_DIR$/rabbitmq-receiver/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="79" column="9" lean-forward="true" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonSelectController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13">
-              <caret line="122" column="29" selection-start-line="122" selection-start-column="29" selection-end-line="122" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/config/SerializingConf.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/ApiPersonApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="76">
+              <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/model/PersonSelectConditionsVO.java">
+        <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonLeaveController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+            <state relative-caret-position="298">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api-person/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/config/RabbitmqSenderConf.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#195#196#0" expanded="true" />
+                <element signature="e#233#234#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/model/PersonInsertVO.java">
+        <entry file="file://$PROJECT_DIR$/api-person/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="249">
+              <caret line="96" column="21" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/model/PersonSelectResultVO.java">
+        <entry file="file://$PROJECT_DIR$/rabbitmq-receiver/src/main/java/com/ccbtrust/rabbitmqreceiver/configuration/ReceiverConf.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="28" column="37" lean-forward="true" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+            <state relative-caret-position="228">
+              <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#315#316#0" expanded="true" />
+                <element signature="e#356#357#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/model/PersonSelectConditionsDTO.java">
+        <entry file="file://$PROJECT_DIR$/rabbitmq-receiver/src/main/java/com/ccbtrust/rabbitmqreceiver/receive/LeaveReceive.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+            <state relative-caret-position="247">
+              <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#307#308#0" expanded="true" />
+                <element signature="e#357#358#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -261,21 +241,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/PersonLeaveDao.java" />
-        <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/PersonLeaveService.java" />
-        <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonLeaveController.java" />
-        <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonLeaveDaoImpl.java" />
-        <option value="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/client/PersonLeaveService.java" />
-        <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/PersonDeleteDao.java" />
-        <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonDeleteDaoImpl.java" />
-        <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonDeleteServiceImpl.java" />
-        <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/PersonDeleteService.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/resources/db/migration/V6__create_person.sql" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonInsertDaoImpl.java" />
         <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonInsertController.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonLeaveServiceImpl.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonDeleteController.java" />
-        <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonLeaveController.java" />
         <option value="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/client/PersonDeleteService.java" />
         <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonDeleteController.java" />
         <option value="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/model/PersonInsertDTO.java" />
@@ -304,7 +274,6 @@
         <option value="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/client/PersonSelectService.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonSelectController.java" />
         <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/model/PersonSelectByConditionsVO.java" />
-        <option value="$PROJECT_DIR$/api-person/pom.xml" />
         <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonSelectController.java" />
         <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/ApiPersonApplication.java" />
         <option value="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/model/PersonSelectConditionsDTO.java" />
@@ -312,6 +281,17 @@
         <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/model/PersonSelectResultVO.java" />
         <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/config/SerializingConf.java" />
         <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/model/PersonSelectConditionsVO.java" />
+        <option value="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/enums/PersonCardType.java" />
+        <option value="$PROJECT_DIR$/service-person/src/main/resources/JooqConfig.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq-receiver/src/main/java/com/ccbtrust/rabbitmqreceiver/RabbitmqReceiverApplication.java" />
+        <option value="$PROJECT_DIR$/rabbitmq-receiver/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq-receiver/src/main/java/com/ccbtrust/rabbitmqreceiver/receive/LeaveReceive.java" />
+        <option value="$PROJECT_DIR$/api-person/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/api-person/pom.xml" />
+        <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/config/RabbitmqSenderConf.java" />
+        <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonLeaveController.java" />
+        <option value="$PROJECT_DIR$/rabbitmq-receiver/src/main/java/com/ccbtrust/rabbitmqreceiver/configuration/ReceiverConf.java" />
+        <option value="$PROJECT_DIR$/rabbitmq-receiver/src/main/resources/application.yml" />
       </list>
     </option>
   </component>
@@ -362,8 +342,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
-    <option name="width" value="1346" />
-    <option name="height" value="698" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1059,16 +1040,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="apiperson" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="homework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="api-person" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="apiperson" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -1077,32 +1048,30 @@
               <item name="api-person" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="apiperson" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="homework" type="b2602c69:ProjectViewProjectNode" />
               <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="remote-client" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmq-receiver" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="homework" type="b2602c69:ProjectViewProjectNode" />
               <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="remote-client" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmq-receiver" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="homework" type="b2602c69:ProjectViewProjectNode" />
               <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="remote-client" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmq-receiver" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="homework" type="b2602c69:ProjectViewProjectNode" />
               <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="remote-client" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmq-receiver" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -1110,121 +1079,39 @@
             <path>
               <item name="homework" type="b2602c69:ProjectViewProjectNode" />
               <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="remote-client" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmq-receiver" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="remoteclient" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmqreceiver" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="homework" type="b2602c69:ProjectViewProjectNode" />
               <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="remote-client" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmq-receiver" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="remoteclient" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmqreceiver" type="462c0819:PsiDirectoryNode" />
+              <item name="configuration" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="homework" type="b2602c69:ProjectViewProjectNode" />
               <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="remote-client" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmq-receiver" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="remoteclient" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmqreceiver" type="462c0819:PsiDirectoryNode" />
+              <item name="receive" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="homework" type="b2602c69:ProjectViewProjectNode" />
               <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="service-person" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="homework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="service-person" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="homework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="service-person" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmq-receiver" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="homework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="service-person" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="homework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="service-person" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="homework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="service-person" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="serviceperson" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="homework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="service-person" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="serviceperson" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="homework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="service-person" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="serviceperson" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="homework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="service-person" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="serviceperson" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="homework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="service-person" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="serviceperson" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1243,8 +1130,8 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551604506403" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551621347080" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rabbitmq-practice/rabbitmq-receiver" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="Errors" />
@@ -1293,6 +1180,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RabbitmqReceiverApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="rabbitmq-receiver" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ccbtrust.rabbitmqreceiver.RabbitmqReceiverApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RemoteClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="remote-client" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ccbtrust.remoteclient.RemoteClientApplication" />
@@ -1312,6 +1206,7 @@
       <item itemvalue="Spring Boot.RemoteClientApplication" />
       <item itemvalue="Spring Boot.ApiPersonApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
+      <item itemvalue="Spring Boot.RabbitmqReceiverApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -1344,18 +1239,17 @@
       <workItem from="1551536303780" duration="601000" />
       <workItem from="1551537216020" duration="2601000" />
       <workItem from="1551575371048" duration="10971000" />
-      <workItem from="1551597017091" duration="7319000" />
+      <workItem from="1551597017091" duration="13891000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194745000" />
+    <option name="totallyTimeSpent" value="201317000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49425286" visible="true" weight="0.28366113" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49425286" visible="true" weight="0.25718608" />
       <window_info id="Structure" order="1" sideWeight="0.50574714" side_tool="true" weight="0.27912253" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1365,7 +1259,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32840723" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.29064038" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.42692938" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5090312" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1399,91 +1293,31 @@
     <MESSAGE value="eureka server 和 eureka client 已经实现，能够注册" />
     <option name="LAST_COMMIT_MESSAGE" value="eureka server 和 eureka client 已经实现，能够注册" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonLeaveController.java</url>
+          <line>40</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonLeaveController.java</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonLeaveController.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/service-person/src/main/resources/db/migration/V1__create_person.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="41" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonDeleteServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="22" column="71" selection-start-line="22" selection-start-column="71" selection-end-line="22" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/ServicePersonApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonDeleteDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonInsertDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/util/ImageUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/util/PathUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonLeaveDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/PersonLeaveService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonLeaveServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/client/PersonDeleteService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonLeaveController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonDeleteController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1575,13 +1409,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonLeaveController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="31" column="11" lean-forward="true" selection-start-line="31" selection-start-column="11" selection-end-line="33" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/configuration.java" />
     <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/configuration/MyConfiguration.java" />
     <entry file="file://$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/configuration/MyConfiguration.java" />
@@ -1603,13 +1430,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/generator/tables/pojos/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="40" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -1654,13 +1474,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonInsertController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonSelectController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="692">
@@ -1668,13 +1481,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-person/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="88" column="60" selection-start-line="88" selection-start-column="60" selection-end-line="88" selection-end-column="60" />
         </state>
       </provider>
     </entry>
@@ -1765,13 +1571,143 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/generator/tables/records/PersonRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3399">
+          <caret line="41" column="7" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/model/PersonSelectConditionsVO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        <state relative-caret-position="437">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/generator/tables/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="86" column="64" selection-start-line="86" selection-start-column="51" selection-end-line="86" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/generator/tables/pojos/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-337">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="40" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-person/src/main/resources/JooqConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="46" lean-forward="true" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonInsertController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="13" column="37" lean-forward="true" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/enums/PersonCardType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-361">
+          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-person/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-person/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="96" column="21" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/config/RabbitmqSenderConf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#195#196#0" expanded="true" />
+            <element signature="e#233#234#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabbitmq-receiver/src/main/java/com/ccbtrust/rabbitmqreceiver/configuration/ReceiverConf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#315#316#0" expanded="true" />
+            <element signature="e#356#357#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabbitmq-receiver/src/main/java/com/ccbtrust/rabbitmqreceiver/receive/LeaveReceive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#307#308#0" expanded="true" />
+            <element signature="e#357#358#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabbitmq-receiver/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabbitmq-receiver/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabbitmq-receiver/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="30" column="21" lean-forward="true" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabbitmq-receiver/src/main/java/com/ccbtrust/rabbitmqreceiver/RabbitmqReceiverApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <element signature="e#283#284#0" expanded="true" />
+            <element signature="e#361#362#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonLeaveController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>

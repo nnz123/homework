@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/api-person" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rabbitmq-receiver" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/remote-client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-person" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
