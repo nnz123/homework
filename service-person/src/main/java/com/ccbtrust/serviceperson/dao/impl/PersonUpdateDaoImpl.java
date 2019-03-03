@@ -4,8 +4,6 @@ import com.ccbtrust.remoteclient.model.PersonUpdateDTO;
 import com.ccbtrust.serviceperson.dao.PersonUpdateDao;
 import com.generator.tables.records.PersonRecord;
 import org.jooq.DSLContext;
-import org.jooq.UpdateConditionStep;
-import org.jooq.UpdateSetFirstStep;
 import org.jooq.UpdateSetMoreStep;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;

@@ -84,6 +84,12 @@
             <version>2.6.1</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+        </dependency>
+
+
 
         <!-- 修改后立即生效，热部署 -->
         <dependency>

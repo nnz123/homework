@@ -2,6 +2,8 @@ package com.ccbtrust.serviceperson.dao;
 
 import com.ccbtrust.remoteclient.model.PersonUpdateDTO;
 
+
+
 /**
  * 更新员工信息
  * @author nzhang
@@ -21,5 +23,7 @@ public interface PersonUpdateDao {
      * @return
      */
     int updatePersonInfo(PersonUpdateDTO personUpdateDTO);
+
+
 
 }
