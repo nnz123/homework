@@ -2,51 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1428bdd2-2470-458d-bcb2-0f2d448a8fe0" name="Default Changelist" comment="eureka server 和 eureka client 已经实现，能够注册">
-      <change afterPath="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/enums/PersonStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/converter/EnumIntegerConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonDeleteController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonInsertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonInsertController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonLeaveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonLeaveController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonSelectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonSelectController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonUpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonUpdateController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/model/PersonInsertVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/model/PersonInsertVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/model/PersonSelectConditionsVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/model/PersonSelectConditionsVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/model/PersonSelectResultVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/model/PersonSelectResultVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/client/PersonDeleteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/client/PersonDeleteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/client/PersonInsertService.java" beforeDir="false" afterPath="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/client/PersonInsertService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/client/PersonLeaveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/client/PersonLeaveService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/client/PersonSelectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/client/PersonSelectService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/client/PersonUpdateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/client/PersonUpdateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/model/PersonInsertDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/model/PersonInsertDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/model/PersonSelectResultDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/model/PersonSelectResultDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonDeleteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonInsertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonInsertController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonLeaveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonLeaveController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonSelectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonSelectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonUpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonUpdateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/PersonInsertDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/PersonInsertDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/PersonSelectDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/PersonSelectDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/PersonUpdateDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/PersonUpdateDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonDeleteDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonDeleteDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonInsertDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonInsertDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonLeaveDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonLeaveDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonSelectDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonSelectDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonUpdateDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonUpdateDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/PersonDeleteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/PersonDeleteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/PersonInsertService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/PersonInsertService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/PersonLeaveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/PersonLeaveService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/PersonUpdateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/PersonUpdateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonDeleteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonDeleteServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonInsertServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonInsertServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonLeaveServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonLeaveServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonSelectServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonSelectServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonUpdateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonUpdateServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/generator/tables/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/generator/tables/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/generator/tables/daos/PersonDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/generator/tables/daos/PersonDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/generator/tables/pojos/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/generator/tables/pojos/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/java/com/generator/tables/records/PersonRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/java/com/generator/tables/records/PersonRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-person/src/main/resources/JooqConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-person/src/main/resources/JooqConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/model/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/model/Result.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/api-person/target/" />
     <ignored path="$PROJECT_DIR$/eureka-server/target/" />
@@ -99,7 +61,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="7" />
-          <entry key="java" value="442" />
+          <entry key="java" value="452" />
           <entry key="pom" value="3" />
           <entry key="properties" value="4" />
           <entry key="sql" value="28" />
@@ -110,7 +72,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="7" />
-          <entry key="JAVA" value="442" />
+          <entry key="JAVA" value="452" />
           <entry key="Properties" value="4" />
           <entry key="SQL" value="28" />
           <entry key="XML" value="51" />
@@ -120,7 +82,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="123" />
-          <entry key="java" value="23626" />
+          <entry key="java" value="24652" />
           <entry key="sql" value="255" />
           <entry key="txt" value="51" />
           <entry key="xml" value="441" />
@@ -129,7 +91,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="23626" />
+          <entry key="JAVA" value="24652" />
           <entry key="PLAIN_TEXT" value="174" />
           <entry key="SQL" value="255" />
           <entry key="XML" value="441" />
@@ -139,14 +101,83 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonSelectController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1178">
+              <caret line="138" column="7" selection-start-line="138" selection-start-column="7" selection-end-line="138" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonUpdateController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="86" column="9" lean-forward="true" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/model/Result.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1026">
+              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+              <folding>
+                <element signature="e#805#806#0" expanded="true" />
+                <element signature="e#835#836#0" expanded="true" />
+                <element signature="e#861#862#0" expanded="true" />
+                <element signature="e#888#889#0" expanded="true" />
+                <element signature="e#922#923#0" expanded="true" />
+                <element signature="e#952#953#0" expanded="true" />
+                <element signature="e#999#1000#0" expanded="true" />
+                <element signature="e#1037#1038#0" expanded="true" />
+                <element signature="e#1072#1073#0" expanded="true" />
+                <element signature="e#1104#1105#0" expanded="true" />
+                <element signature="e#1150#1151#0" expanded="true" />
+                <element signature="e#1188#1189#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonDeleteController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="33" column="52" lean-forward="true" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonInsertController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonLeaveController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -157,12 +188,14 @@
       <find>personSelectDTO</find>
       <find>personSelectVOList</find>
       <find>personSelectVO</find>
+      <find>errorMsg</find>
     </findStrings>
     <replaceStrings>
       <replace>state</replace>
       <replace>personSelectResultDTO</replace>
       <replace>personSelectResultVOList</replace>
       <replace>personSelectResultVO</replace>
+      <replace>message</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -171,7 +204,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/enums/PersonCardType.java" />
         <option value="$PROJECT_DIR$/rabbitmq-receiver/src/main/java/com/ccbtrust/rabbitmqreceiver/RabbitmqReceiverApplication.java" />
         <option value="$PROJECT_DIR$/rabbitmq-receiver/pom.xml" />
         <option value="$PROJECT_DIR$/rabbitmq-receiver/src/main/java/com/ccbtrust/rabbitmqreceiver/receive/LeaveReceive.java" />
@@ -187,16 +219,13 @@
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/PersonLeaveDao.java" />
         <option value="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/model/PersonSelectResultDTO.java" />
         <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/model/PersonSelectResultVO.java" />
-        <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/model/PersonInsertVO.java" />
         <option value="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/model/PersonInsertDTO.java" />
-        <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonInsertController.java" />
         <option value="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/client/PersonInsertService.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/PersonInsertDao.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonInsertDaoImpl.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/PersonInsertService.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonInsertServiceImpl.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonInsertController.java" />
-        <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonUpdateController.java" />
         <option value="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/client/PersonUpdateService.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonUpdateController.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/PersonUpdateService.java" />
@@ -205,12 +234,10 @@
         <option value="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/client/PersonDeleteService.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonDeleteController.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/PersonDeleteService.java" />
-        <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonDeleteController.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonDeleteDaoImpl.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonDeleteServiceImpl.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonUpdateServiceImpl.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/dao/impl/PersonLeaveDaoImpl.java" />
-        <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonLeaveController.java" />
         <option value="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/client/PersonLeaveService.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonLeaveController.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/PersonLeaveService.java" />
@@ -220,8 +247,14 @@
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/impl/PersonSelectServiceImpl.java" />
         <option value="$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/controller/PersonSelectController.java" />
         <option value="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/client/PersonSelectService.java" />
-        <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonSelectController.java" />
         <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/model/PersonSelectConditionsVO.java" />
+        <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/model/PersonInsertVO.java" />
+        <option value="$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/model/Result.java" />
+        <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonDeleteController.java" />
+        <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonInsertController.java" />
+        <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonLeaveController.java" />
+        <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonUpdateController.java" />
+        <option value="$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonSelectController.java" />
       </list>
     </option>
   </component>
@@ -971,16 +1004,6 @@
             <path>
               <item name="homework" type="b2602c69:ProjectViewProjectNode" />
               <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="api-person" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="apiperson" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="homework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="homework" type="462c0819:PsiDirectoryNode" />
               <item name="remote-client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -1012,16 +1035,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="remoteclient" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="homework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="homework" type="462c0819:PsiDirectoryNode" />
-              <item name="remote-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="remoteclient" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="homework" type="b2602c69:ProjectViewProjectNode" />
@@ -1151,7 +1164,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551701549042" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551705426989" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../practice-work" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -1267,12 +1280,12 @@
       <workItem from="1551665828144" duration="367000" />
       <workItem from="1551677946647" duration="1564000" />
       <workItem from="1551679533883" duration="251000" />
-      <workItem from="1551679803678" duration="19718000" />
+      <workItem from="1551679803678" duration="23586000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225292000" />
+    <option name="totallyTimeSpent" value="229160000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1288,7 +1301,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32840723" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.32019705" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.23481117" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5090312" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1323,13 +1336,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="eureka server 和 eureka client 已经实现，能够注册" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rabbitmq-receiver/src/main/java/com/ccbtrust/rabbitmqreceiver/configuration/ReceiverConf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rabbitmq-receiver/src/main/java/com/ccbtrust/rabbitmqreceiver/receive/LeaveReceive.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -1400,16 +1406,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="25" column="38" lean-forward="true" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/model/PersonInsertVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1568,31 +1564,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonInsertController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonDeleteController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service-person/src/main/java/com/ccbtrust/serviceperson/service/PersonLeaveService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonLeaveController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="50" column="19" lean-forward="true" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1611,13 +1586,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonUpdateController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-323">
-          <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -1695,10 +1663,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/model/PersonInsertVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/remote-client/src/main/java/com/ccbtrust/remoteclient/model/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+          <folding>
+            <element signature="e#805#806#0" expanded="true" />
+            <element signature="e#835#836#0" expanded="true" />
+            <element signature="e#861#862#0" expanded="true" />
+            <element signature="e#888#889#0" expanded="true" />
+            <element signature="e#922#923#0" expanded="true" />
+            <element signature="e#952#953#0" expanded="true" />
+            <element signature="e#999#1000#0" expanded="true" />
+            <element signature="e#1037#1038#0" expanded="true" />
+            <element signature="e#1072#1073#0" expanded="true" />
+            <element signature="e#1104#1105#0" expanded="true" />
+            <element signature="e#1150#1151#0" expanded="true" />
+            <element signature="e#1188#1189#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonDeleteController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="33" column="52" lean-forward="true" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonInsertController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonLeaveController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonUpdateController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="86" column="9" lean-forward="true" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api-person/src/main/java/com/ccbtrust/apiperson/controller/PersonSelectController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-367">
-          <caret line="98" column="93" selection-start-line="98" selection-start-column="93" selection-end-line="98" selection-end-column="93" />
+        <state relative-caret-position="1178">
+          <caret line="138" column="7" selection-start-line="138" selection-start-column="7" selection-end-line="138" selection-end-column="7" />
         </state>
       </provider>
     </entry>

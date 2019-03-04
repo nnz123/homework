@@ -5,6 +5,7 @@ import com.ccbtrust.apiperson.model.PersonSelectResultVO;
 import com.ccbtrust.remoteclient.client.PersonSelectService;
 import com.ccbtrust.remoteclient.model.PersonSelectConditionsDTO;
 import com.ccbtrust.remoteclient.model.PersonSelectResultDTO;
+import com.ccbtrust.remoteclient.model.Result;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,23 +34,19 @@ public class PersonSelectController {
      */
     @ApiOperation("通过id查询员工")
     @RequestMapping(value = "/selectById/{id}",method = RequestMethod.GET)
-    public Map<String,Object> selectById(@ApiParam("员工id") @PathVariable("id") int id){
-        Map<String,Object> map = new HashMap<>(16);
+    public Result selectById(@ApiParam("员工id") @PathVariable("id") int id){
+
         PersonSelectResultDTO personSelectResultDTO;
         try {
             personSelectResultDTO = personSelectService.selectById(id);
         } catch (Exception e) {
-            map.put("success",false);
-            map.put("message",e.getMessage());
-            return map;
+           return new Result(false,e.getMessage());
         }
         PersonSelectResultVO personSelectResultVO = new PersonSelectResultVO();
         //将DTO转换为VO
         selectResultDTOToVo(personSelectResultDTO, personSelectResultVO);
-        map.put("success",true);
-        map.put("message","查询成功");
-        map.put("person",personSelectResultVO);
-        return map;
+        return new Result<>(true,personSelectResultVO,"查询成功！");
+
     }
 
 
@@ -60,23 +57,19 @@ public class PersonSelectController {
      */
     @ApiOperation("根据证件号码查询员工")
     @RequestMapping(value = "/selectByCardNum/{cardNum}",method = RequestMethod.GET)
-    public Map<String,Object> selectByCardNum(@ApiParam("证件号码")@PathVariable("cardNum") String cardNum){
-        Map<String,Object> map = new HashMap<>(16);
+    public Result selectByCardNum(@ApiParam("证件号码")@PathVariable("cardNum") String cardNum){
+
         PersonSelectResultDTO personSelectResultDTO;
         try {
             personSelectResultDTO = personSelectService.selectByCardNum(cardNum);
         } catch (Exception e) {
-            map.put("success",false);
-            map.put("message",e.getMessage());
-            return map;
+            return new Result(false,e.getMessage());
         }
         PersonSelectResultVO personSelectResultVO = new PersonSelectResultVO();
         //将DTO转换为VO
         selectResultDTOToVo(personSelectResultDTO, personSelectResultVO);
-        map.put("success",true);
-        map.put("message","查询成功");
-        map.put("person",personSelectResultVO);
-        return map;
+
+        return new Result<>(true,personSelectResultVO,"查询成功！");
     }
 
     /**
@@ -87,20 +80,16 @@ public class PersonSelectController {
      */
     @ApiOperation("查询所有员工信息")
     @RequestMapping(value = "/selectAll/{pageNum}/{pageSize}",method = RequestMethod.GET)
-    public Map<String,Object> selectAll(@ApiParam("页码")@PathVariable("pageNum") int pageNum,@ApiParam("每页显示条数") @PathVariable("pageSize") int pageSize){
-        Map<String,Object> map = new HashMap<>(16);
+    public Result selectAll(@ApiParam("页码")@PathVariable("pageNum") int pageNum,@ApiParam("每页显示条数") @PathVariable("pageSize") int pageSize){
+
         List<PersonSelectResultDTO> personSelectResultDTOList;
         try {
             if (pageNum<1||pageSize<1){
-                map.put("success",false);
-                map.put("message","请输入正确的页码和每页显示的条数");
-                return map;
+                return new Result(false,"请输入正确的页码和每页显示的条数");
             }
                 personSelectResultDTOList = personSelectService.selectAll(pageNum, pageSize);
         } catch (Exception e) {
-            map.put("success",false);
-            map.put("message",e.getMessage());
-            return map;
+            return new Result(false,e.getMessage());
 
         }
         List<PersonSelectResultVO> personSelectResultVOList = new ArrayList<>();
@@ -109,10 +98,9 @@ public class PersonSelectController {
             selectResultDTOToVo(personSelectResultDTO, personSelectResultVO);
             personSelectResultVOList.add(personSelectResultVO);
         }
-        map.put("success",true);
-        map.put("message","查询成功");
-        map.put("persons",personSelectResultVOList);
-        return map;
+
+        return new Result<>(true,personSelectResultVOList,"查询成功！");
+
     }
 
     /**
@@ -122,8 +110,8 @@ public class PersonSelectController {
      */
     @ApiOperation("通过组合条件查询员工")
     @RequestMapping(value = "/selectByConditions",method = RequestMethod.POST)
-    Map<String, Object> selectByConditions(@ApiParam("查询条件VO")@Valid PersonSelectConditionsVO personSelectConditionsVO){
-        Map<String,Object> map = new HashMap<>(16);
+   public Result selectByConditions(@ApiParam("查询条件VO")@Valid PersonSelectConditionsVO personSelectConditionsVO){
+
         PersonSelectConditionsDTO personSelectConditionsDTO = new PersonSelectConditionsDTO();
         if (personSelectConditionsVO!=null){
             personSelectConditionsDTO.setPersonName(personSelectConditionsVO.getPersonName());
@@ -137,9 +125,7 @@ public class PersonSelectController {
         try {
             personSelectResultDTOList = personSelectService.selectByConditions(personSelectConditionsDTO);
         } catch (Exception e) {
-            map.put("success",false);
-            map.put("message",e.getMessage());
-            return map;
+            return new Result(false,e.getMessage());
         }
 
         List<PersonSelectResultVO> personSelectResultVOList = new ArrayList<>();
@@ -148,10 +134,8 @@ public class PersonSelectController {
             selectResultDTOToVo(personSelectResultDTO, personSelectResultVO);
             personSelectResultVOList.add(personSelectResultVO);
         }
-        map.put("success",true);
-        map.put("message","查询成功");
-        map.put("persons",personSelectResultVOList);
-        return map;
+
+        return new Result<>(true,personSelectResultVOList,"查询成功！");
 
     }
 

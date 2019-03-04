@@ -3,6 +3,7 @@ package com.ccbtrust.apiperson.controller;
 import com.ccbtrust.apiperson.model.PersonInsertVO;
 import com.ccbtrust.remoteclient.client.PersonInsertService;
 import com.ccbtrust.remoteclient.model.PersonInsertDTO;
+import com.ccbtrust.remoteclient.model.Result;
 import com.ccbtrust.remoteclient.util.ImageUtil;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -32,9 +33,7 @@ public class PersonInsertController {
      */
     @ApiOperation("添加员工信息")
     @RequestMapping(value = "/addPerson", method = RequestMethod.POST)
-    public Map<String, Object> insert(@ApiParam("员工基本信息personName,cardType, cardNum,phoneNum")@Valid PersonInsertVO personInsertVO) {
-       //用于携带返回信息
-        Map<String, Object> map = new HashMap<>(16);
+    public Result insert(@ApiParam("员工基本信息personName,cardType, cardNum,phoneNum")@Valid PersonInsertVO personInsertVO) {
         PersonInsertDTO personInsertDTO = new PersonInsertDTO();
         //添加用户基础信息
         if (personInsertVO != null) {
@@ -47,14 +46,10 @@ public class PersonInsertController {
             try {
                 personInsertService.insert(personInsertDTO);
             } catch (Exception e) {
-                map.put("success", false);
-                map.put("message", "添加员工失败！"+e.toString());
-                return map;
+                return new Result(false,e.getMessage());
             }
         }
-        map.put("success", true);
-        map.put("message", "添加员工成功！");
-        return map;
+        return new Result<>(true,null,"员工添加成功！");
     }
 
 }

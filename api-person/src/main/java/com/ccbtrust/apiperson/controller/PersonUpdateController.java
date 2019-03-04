@@ -2,6 +2,7 @@ package com.ccbtrust.apiperson.controller;
 
 import com.ccbtrust.remoteclient.client.PersonUpdateService;
 import com.ccbtrust.remoteclient.model.PersonUpdateDTO;
+import com.ccbtrust.remoteclient.model.Result;
 import com.ccbtrust.remoteclient.util.ImageUtil;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -30,14 +31,12 @@ public class PersonUpdateController {
      */
     @ApiOperation("修改员工头像")
     @RequestMapping(value = "/uploadPicture/{id}", method = RequestMethod.PUT)
-    public Map<String, Object> uploadPicture(@ApiParam("员工id") @PathVariable("id")int id, @ApiParam(value = "员工的头像",required = true)@RequestParam(value = "mPicture") MultipartFile mPicture) {
+    public Result uploadPicture(@ApiParam("员工id") @PathVariable("id")int id, @ApiParam(value = "员工的头像",required = true)@RequestParam(value = "mPicture") MultipartFile mPicture) {
         //用于携带返回信息
         Map<String, Object> map = new HashMap<>(16);
         //判断头像是否上传
         if (mPicture==null){
-            map.put("success", false);
-            map.put("message", "必须选择头像");
-            return map;
+            return new Result<>(false,"必须上传头像");
         }
         //获取头像名称
         String imageName = mPicture.getOriginalFilename();
@@ -48,21 +47,15 @@ public class PersonUpdateController {
         try {
             mPicture.transferTo(file);
         } catch (Exception e) {
-            map.put("success", false);
-            map.put("message", e.getMessage());
-            return map;
+            return  new Result(false,e.getMessage());
         }
         //将图片存储地址保存到数据库
         try {
             personUpdateService.uploadPicture(id,localPictureAddr);
         } catch (Exception e) {
-            map.put("success", false);
-            map.put("message", e.getMessage());
-            return map;
+            return new Result(false,e.getMessage());
         }
-        map.put("success", true);
-        map.put("message", "头像上传成功！");
-        return map;
+        return new Result<>(true,null,id+"号员工头像上传成功！");
     }
 
     /**
@@ -76,7 +69,7 @@ public class PersonUpdateController {
      */
     @ApiOperation("修改员工基本信息")
     @RequestMapping(value = "/updatePersonInfo/{id}",method = RequestMethod.PUT)
-    public Map<String,Object> updatePersonInfo(@ApiParam("员工id")@PathVariable(value = "id") Integer id,@ApiParam("员工的姓名")@RequestParam(value = "personName",required = false) String personName,@ApiParam("员工的证件类型")@RequestParam(value = "cardType",required = false) Integer cardType,@ApiParam("员工的证件号码") @RequestParam(value = "cardNum",required = false) String cardNum,@ApiParam("员工的电话号码")@RequestParam(value = "phoneNum",required = false) String phoneNum ){
+    public Result updatePersonInfo(@ApiParam("员工id")@PathVariable(value = "id") Integer id,@ApiParam("员工的姓名")@RequestParam(value = "personName",required = false) String personName,@ApiParam("员工的证件类型")@RequestParam(value = "cardType",required = false) Integer cardType,@ApiParam("员工的证件号码") @RequestParam(value = "cardNum",required = false) String cardNum,@ApiParam("员工的电话号码")@RequestParam(value = "phoneNum",required = false) String phoneNum ){
         //用于携带返回信息
         Map<String, Object> map = new HashMap<>(16);
         PersonUpdateDTO  personUpdateDTO = new PersonUpdateDTO();
@@ -90,13 +83,9 @@ public class PersonUpdateController {
         try {
             personUpdateService.updatePersonInfo(personUpdateDTO);
         } catch (Exception e) {
-            map.put("success", false);
-            map.put("message",e.getMessage() );
-            return map;
+            return new Result(false,e.getMessage());
         }
-        map.put("success", true);
-        map.put("message", "员工基本信息修改完成");
-        return map;
+        return new Result<>(true,null,id+"号员工信息修改成功！");
     }
 
 }

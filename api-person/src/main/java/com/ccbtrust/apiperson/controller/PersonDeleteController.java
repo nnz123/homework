@@ -1,6 +1,7 @@
 package com.ccbtrust.apiperson.controller;
 
 import com.ccbtrust.remoteclient.client.PersonDeleteService;
+import com.ccbtrust.remoteclient.model.Result;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,20 +25,14 @@ public class PersonDeleteController {
      */
     @ApiOperation("根据id删除员工信息")
     @RequestMapping(value = "deleteById/{id}",method = RequestMethod.PUT)
-    public Map<String,Object> deleteById(@ApiParam("员工id") @PathVariable("id")int id) {
-        //用于携带返回信息
-        Map<String,Object> map = new HashMap<>(16);
+    public Result deleteById(@ApiParam("员工id") @PathVariable("id")int id) {
         //设定默认的删除操作者姓名
         String deletePerson = "Tom";
         try {
             personDeleteService.deleteById(id,deletePerson);
         }catch (Exception e){
-            map.put("success",false);
-            map.put("message",e.getMessage());
-            return map;
+            return new Result(false,e.getMessage());
         }
-        map.put("success",true);
-        map.put("message",id +"号员工删除成功!");
-        return map;
+        return new Result<>(true,null,id+"号员工删除成功！");
     }
 }

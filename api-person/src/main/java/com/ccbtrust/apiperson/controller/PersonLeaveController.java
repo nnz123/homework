@@ -1,6 +1,7 @@
 package com.ccbtrust.apiperson.controller;
 
 import com.ccbtrust.remoteclient.client.PersonLeaveService;
+import com.ccbtrust.remoteclient.model.Result;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.amqp.core.AmqpTemplate;
@@ -33,22 +34,18 @@ public class PersonLeaveController {
      */
     @ApiOperation("员工离职")
     @RequestMapping(value = "/leave/{id}",method = RequestMethod.PUT)
-    public Map<String,Object> leave(@ApiParam("员工id") @PathVariable("id") int id){
-        //用于携带返回信息
-        Map<String,Object> map = new HashMap<>(16);
+    public Result leave(@ApiParam("员工id") @PathVariable("id") int id){
+
         //设置默认的操作人姓名
         String editPerson = "Jack";
         try {
             personLeaveService.leave(id,editPerson);
         } catch (Exception e) {
-            map.put("success",false);
-            map.put("message",e.getMessage());
-            return map;
+            return new Result(false,e.getMessage());
         }
         amqpTemplate.convertAndSend("leave","员工id:"+id+"离职");
-        map.put("success",true);
-        map.put("message",id+"号员工离职成功");
-        return map;
+
+        return new Result<>(true,null,id+"号员工离职成功！");
     }
 
 
