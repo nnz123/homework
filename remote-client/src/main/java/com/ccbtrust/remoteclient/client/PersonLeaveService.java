@@ -16,7 +16,7 @@ public interface PersonLeaveService {
     /**
      * y员工离职
      * @param id 员工id
-     * @param editPerson 编辑人姓名
+     * @param editPerson 操作人姓名
      */
     @RequestMapping(value = "/leave/{id}",method = RequestMethod.PUT)
     void leave(@PathVariable("id") int id, @RequestParam("editPerson") String editPerson);

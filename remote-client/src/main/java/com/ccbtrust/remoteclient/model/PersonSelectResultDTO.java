@@ -1,5 +1,6 @@
 package com.ccbtrust.remoteclient.model;
 
+import com.ccbtrust.remoteclient.enums.PersonStatus;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -22,6 +23,7 @@ public class PersonSelectResultDTO {
     private String        cardNum;
     private String        personPicture;
     private String        phoneNum;
+    private PersonStatus personStatus;
     private String        createPerson;
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
     private LocalDateTime createTime;

@@ -8,7 +8,7 @@ public interface PersonLeaveService {
     /**
      * 员工离职
      * @param id 员工id
-     * @param  editPerson 修改人
+     * @param  editPerson 操作人姓名
      */
     void leave(int id,String editPerson);
 }

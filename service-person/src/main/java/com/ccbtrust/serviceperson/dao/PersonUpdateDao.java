@@ -13,17 +13,15 @@ public interface PersonUpdateDao {
      * 上传员工头像
      * @param id 员工id
      * @param localPictureAddr 员工头像存储地址
-     * @return
+     * @return 反回修改的条数
      */
     int uploadPicture(int id, String localPictureAddr);
 
     /**
-     * 更新员工基本信息
+     * 修改员工基本信息
      * @param personUpdateDTO  员工基本信息DTO
-     * @return
+     * @return 返回修改的条数
      */
     int updatePersonInfo(PersonUpdateDTO personUpdateDTO);
-
-
 
 }

@@ -10,6 +10,7 @@ import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -20,6 +21,7 @@ import java.util.Map;
  * @author nzhang
  */
 @RestController
+@RequestMapping("/person/select")
 public class PersonSelectController {
     @Autowired
     private PersonSelectService personSelectService;
@@ -30,7 +32,7 @@ public class PersonSelectController {
      * @return  查询到的信息
      */
     @ApiOperation("通过id查询员工")
-    @RequestMapping(value = "/person/select/selectById/{id}",method = RequestMethod.GET)
+    @RequestMapping(value = "/selectById/{id}",method = RequestMethod.GET)
     public Map<String,Object> selectById(@ApiParam("员工id") @PathVariable("id") int id){
         Map<String,Object> map = new HashMap<>(16);
         PersonSelectResultDTO personSelectResultDTO;
@@ -41,17 +43,12 @@ public class PersonSelectController {
             map.put("message",e.getMessage());
             return map;
         }
-        PersonSelectResultVO personSelectVO = new PersonSelectResultVO();
-        personSelectVO.setId(personSelectResultDTO.getId());
-        personSelectVO.setPersonName(personSelectResultDTO.getPersonName());
-        personSelectVO.setCardType(personSelectResultDTO.getCardType());
-        personSelectVO.setCardNum(personSelectResultDTO.getCardNum());
-        personSelectVO.setPhoneNum(personSelectResultDTO.getPhoneNum());
-        personSelectVO.setCreatePerson(personSelectResultDTO.getCreatePerson());
-        personSelectVO.setCreateTime(personSelectResultDTO.getCreateTime());
+        PersonSelectResultVO personSelectResultVO = new PersonSelectResultVO();
+        //将DTO转换为VO
+        selectResultDTOToVo(personSelectResultDTO, personSelectResultVO);
         map.put("success",true);
         map.put("message","查询成功");
-        map.put("person",personSelectVO);
+        map.put("person",personSelectResultVO);
         return map;
     }
 
@@ -62,7 +59,7 @@ public class PersonSelectController {
      * @return  查询到的信息
      */
     @ApiOperation("根据证件号码查询员工")
-    @RequestMapping(value = "/person/select/selectByCardNum/{cardNum}",method = RequestMethod.GET)
+    @RequestMapping(value = "/selectByCardNum/{cardNum}",method = RequestMethod.GET)
     public Map<String,Object> selectByCardNum(@ApiParam("证件号码")@PathVariable("cardNum") String cardNum){
         Map<String,Object> map = new HashMap<>(16);
         PersonSelectResultDTO personSelectResultDTO;
@@ -73,17 +70,12 @@ public class PersonSelectController {
             map.put("message",e.getMessage());
             return map;
         }
-        PersonSelectResultVO personSelectVO = new PersonSelectResultVO();
-        personSelectVO.setId(personSelectResultDTO.getId());
-        personSelectVO.setPersonName(personSelectResultDTO.getPersonName());
-        personSelectVO.setCardType(personSelectResultDTO.getCardType());
-        personSelectVO.setCardNum(personSelectResultDTO.getCardNum());
-        personSelectVO.setPhoneNum(personSelectResultDTO.getPhoneNum());
-        personSelectVO.setCreatePerson(personSelectResultDTO.getCreatePerson());
-        personSelectVO.setCreateTime(personSelectResultDTO.getCreateTime());
+        PersonSelectResultVO personSelectResultVO = new PersonSelectResultVO();
+        //将DTO转换为VO
+        selectResultDTOToVo(personSelectResultDTO, personSelectResultVO);
         map.put("success",true);
         map.put("message","查询成功");
-        map.put("person",personSelectVO);
+        map.put("person",personSelectResultVO);
         return map;
     }
 
@@ -94,21 +86,29 @@ public class PersonSelectController {
      * @return 查询到的信息
      */
     @ApiOperation("查询所有员工信息")
-    @RequestMapping(value = "/person/select/selectAll/{pageNum}/{pageSize}",method = RequestMethod.GET)
+    @RequestMapping(value = "/selectAll/{pageNum}/{pageSize}",method = RequestMethod.GET)
     public Map<String,Object> selectAll(@ApiParam("页码")@PathVariable("pageNum") int pageNum,@ApiParam("每页显示条数") @PathVariable("pageSize") int pageSize){
         Map<String,Object> map = new HashMap<>(16);
         List<PersonSelectResultDTO> personSelectResultDTOList;
-
         try {
-            personSelectResultDTOList = personSelectService.selectAll(pageNum, pageSize);
+            if (pageNum<1||pageSize<1){
+                map.put("success",false);
+                map.put("message","请输入正确的页码和每页显示的条数");
+                return map;
+            }
+                personSelectResultDTOList = personSelectService.selectAll(pageNum, pageSize);
         } catch (Exception e) {
             map.put("success",false);
             map.put("message",e.getMessage());
             return map;
-        }
 
+        }
         List<PersonSelectResultVO> personSelectResultVOList = new ArrayList<>();
-        SelectResultDTO_TO_VO(personSelectResultDTOList, personSelectResultVOList);
+        for (PersonSelectResultDTO personSelectResultDTO : personSelectResultDTOList) {
+            PersonSelectResultVO personSelectResultVO = new PersonSelectResultVO();
+            selectResultDTOToVo(personSelectResultDTO, personSelectResultVO);
+            personSelectResultVOList.add(personSelectResultVO);
+        }
         map.put("success",true);
         map.put("message","查询成功");
         map.put("persons",personSelectResultVOList);
@@ -116,12 +116,13 @@ public class PersonSelectController {
     }
 
     /**
-     * 通过组合条件查询
+     * 通过组合条件查询, 姓名为XX， 证件类型XX的，创建日期在yyyy-MM-dd HH:mm:ss之后的
      * @param personSelectConditionsVO 查询条件
      * @return 返回查询结果
      */
-    @RequestMapping(value = "/person/select/selectByConditions",method = RequestMethod.POST)
-    Map<String, Object> selectByConditions( PersonSelectConditionsVO personSelectConditionsVO){
+    @ApiOperation("通过组合条件查询员工")
+    @RequestMapping(value = "/selectByConditions",method = RequestMethod.POST)
+    Map<String, Object> selectByConditions(@ApiParam("查询条件VO")@Valid PersonSelectConditionsVO personSelectConditionsVO){
         Map<String,Object> map = new HashMap<>(16);
         PersonSelectConditionsDTO personSelectConditionsDTO = new PersonSelectConditionsDTO();
         if (personSelectConditionsVO!=null){
@@ -142,7 +143,11 @@ public class PersonSelectController {
         }
 
         List<PersonSelectResultVO> personSelectResultVOList = new ArrayList<>();
-        SelectResultDTO_TO_VO(personSelectResultDTOList, personSelectResultVOList);
+        for (PersonSelectResultDTO personSelectResultDTO : personSelectResultDTOList) {
+            PersonSelectResultVO personSelectResultVO = new PersonSelectResultVO();
+            selectResultDTOToVo(personSelectResultDTO, personSelectResultVO);
+            personSelectResultVOList.add(personSelectResultVO);
+        }
         map.put("success",true);
         map.put("message","查询成功");
         map.put("persons",personSelectResultVOList);
@@ -150,25 +155,19 @@ public class PersonSelectController {
 
     }
 
-
     /**
-     * 将查询结果的DTO list 转换为 VO list
-     * @param personSelectResultDTOList
-     * @param personSelectResultVOList
+     * 将查询结果由DTO转换为VO
+     * @param personSelectResultDTO  查询结果DTO
+     * @param personSelectResultVO   查询结果VO
      */
-    private void SelectResultDTO_TO_VO(List<PersonSelectResultDTO> personSelectResultDTOList, List<PersonSelectResultVO> personSelectResultVOList) {
-        for (PersonSelectResultDTO personSelectResultDTO : personSelectResultDTOList) {
-            PersonSelectResultVO personSelectVO = new PersonSelectResultVO();
-            personSelectVO.setId(personSelectResultDTO.getId());
-            personSelectVO.setPersonName(personSelectResultDTO.getPersonName());
-            personSelectVO.setCardType(personSelectResultDTO.getCardType());
-            personSelectVO.setCardNum(personSelectResultDTO.getCardNum());
-            personSelectVO.setPhoneNum(personSelectResultDTO.getPhoneNum());
-            personSelectVO.setCreatePerson(personSelectResultDTO.getCreatePerson());
-            personSelectVO.setCreateTime(personSelectResultDTO.getCreateTime());
-            personSelectResultVOList.add(personSelectVO);
-        }
+    private void selectResultDTOToVo(PersonSelectResultDTO personSelectResultDTO, PersonSelectResultVO personSelectResultVO) {
+        personSelectResultVO.setId(personSelectResultDTO.getId());
+        personSelectResultVO.setPersonName(personSelectResultDTO.getPersonName());
+        personSelectResultVO.setCardType(personSelectResultDTO.getCardType());
+        personSelectResultVO.setCardNum(personSelectResultDTO.getCardNum());
+        personSelectResultVO.setPhoneNum(personSelectResultDTO.getPhoneNum());
+        personSelectResultVO.setPersonStatus(personSelectResultDTO.getPersonStatus());
+        personSelectResultVO.setCreatePerson(personSelectResultDTO.getCreatePerson());
+        personSelectResultVO.setCreateTime(personSelectResultDTO.getCreateTime());
     }
-
-
 }

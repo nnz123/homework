@@ -17,17 +17,17 @@ public class PersonSelectController {
     @Autowired
     private PersonSelectService personSelectService;
 
-    @RequestMapping(value = "/select/selectById/{id}",method = RequestMethod.GET)
+    @RequestMapping(value = "/selectById/{id}",method = RequestMethod.GET)
     public PersonSelectResultDTO selectById(@PathVariable("id") int id){
         return personSelectService.selectById(id);
     }
 
-    @RequestMapping(value = "/select/selectByCardNum/{cardNum}",method = RequestMethod.GET)
+    @RequestMapping(value = "/selectByCardNum/{cardNum}",method = RequestMethod.GET)
     public PersonSelectResultDTO selectByCardNum(@PathVariable("cardNum") String cardNum){
         return personSelectService.selectByCardNum(cardNum);
     }
 
-    @RequestMapping(value = "/select/selectAll/{pageNum}/{pageSize}",method = RequestMethod.GET)
+    @RequestMapping(value = "/selectAll/{pageNum}/{pageSize}",method = RequestMethod.GET)
     public List<PersonSelectResultDTO> selectAll(@PathVariable("pageNum") int pageNum, @PathVariable("pageSize") int pageSize){
         return personSelectService.selectAll(pageNum,pageSize);
     }
@@ -37,7 +37,7 @@ public class PersonSelectController {
      * @param personSelectConditionsDTO 查询条件
      * @return 返回查询结果
      */
-    @RequestMapping(value = "/select/selectByConditions",method = RequestMethod.POST)
+    @RequestMapping(value = "/selectByConditions",method = RequestMethod.POST)
     public List<PersonSelectResultDTO> selectByConditions(@RequestBody PersonSelectConditionsDTO personSelectConditionsDTO){
         return personSelectService.selectByConditions(personSelectConditionsDTO);
     }

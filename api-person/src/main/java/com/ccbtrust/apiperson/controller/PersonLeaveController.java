@@ -18,6 +18,7 @@ import java.util.Map;
  * @author nzhang
  */
 @RestController
+@RequestMapping("/person/update")
 public class PersonLeaveController {
     @Autowired
     private PersonLeaveService personLeaveService;
@@ -25,10 +26,17 @@ public class PersonLeaveController {
     @Autowired
     private AmqpTemplate amqpTemplate;
 
+    /**
+     * 员工离职
+     * @param id 员工id
+     * @return 返回是否离职成功等信息
+     */
     @ApiOperation("员工离职")
-    @RequestMapping(value = "/person/leave/{id}",method = RequestMethod.PUT)
+    @RequestMapping(value = "/leave/{id}",method = RequestMethod.PUT)
     public Map<String,Object> leave(@ApiParam("员工id") @PathVariable("id") int id){
+        //用于携带返回信息
         Map<String,Object> map = new HashMap<>(16);
+        //设置默认的操作人姓名
         String editPerson = "Jack";
         try {
             personLeaveService.leave(id,editPerson);

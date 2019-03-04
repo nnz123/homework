@@ -14,14 +14,14 @@ public interface PersonSelectDao{
      * @param id 员工id
      * @return 查询到的员工信息
      */
-    PersonSelectResultDTO selectById(int id);
+    List<PersonSelectResultDTO> selectById(int id);
 
     /**
      * 根据员工证件号码查询员工
      * @param cardNum  员工证件号码
      * @return 查询到的员工信息
      */
-    PersonSelectResultDTO selectByCardNum(String cardNum);
+    List<PersonSelectResultDTO> selectByCardNum(String cardNum);
 
     /**
      * 分页查询所有员工信息

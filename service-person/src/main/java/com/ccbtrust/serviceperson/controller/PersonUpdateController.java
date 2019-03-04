@@ -15,12 +15,21 @@ public class PersonUpdateController {
     @Autowired
     private PersonUpdateService personUpdateService;
 
-    @RequestMapping(value = "/update/uploadPicture/{id}",method = RequestMethod.PUT)
+    /**
+     * 上传员工头像
+     * @param id 员工id
+     * @param localPictureAddr 头像存储地址
+     */
+    @RequestMapping(value = "/uploadPicture/{id}",method = RequestMethod.PUT)
     public void updatePicture(@PathVariable("id") int id, String localPictureAddr){
         personUpdateService.uploadPicture(id,localPictureAddr);
     }
 
-    @RequestMapping(value = "/update/updatePersonInfo", method = RequestMethod.PUT)
+    /**
+     * 修改员工基本信息
+     * @param personUpdateDTO 员工基本信息DTO
+     */
+    @RequestMapping(value = "/updatePersonInfo", method = RequestMethod.PUT)
     public void updatePersonInfo(@RequestBody PersonUpdateDTO personUpdateDTO){
         personUpdateService.updatePersonInfo(personUpdateDTO);
     }

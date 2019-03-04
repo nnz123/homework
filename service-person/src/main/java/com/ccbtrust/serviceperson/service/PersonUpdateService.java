@@ -3,7 +3,7 @@ package com.ccbtrust.serviceperson.service;
 import com.ccbtrust.remoteclient.model.PersonUpdateDTO;
 
 /**
- * 跟新员工信息
+ * 更新新员工信息
  * @author nzhang
  */
 public interface PersonUpdateService {
@@ -15,8 +15,8 @@ public interface PersonUpdateService {
     void uploadPicture(int id,String localPictureAddr);
 
     /**
-     * 更新员工信息
-     * @param personUpdateDTO 更新员工信息DTO
+     * 修改员工基本信息
+     * @param personUpdateDTO 员工基本信息DTO
      */
     void updatePersonInfo(PersonUpdateDTO personUpdateDTO);
 }

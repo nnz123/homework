@@ -5,16 +5,16 @@ import com.ccbtrust.remoteclient.model.PersonInsertDTO;
 import java.util.Map;
 
 /**
+ * 添加操作
  * @author nzhang
  */
 public interface PersonInsertService {
     /**
      * 增加员工
      * @param  personInsertDTO 员工信息
-     * @return 反回插入的行数
      *
      */
-     void insert(PersonInsertDTO personInsertDTO);
+     void addPerson(PersonInsertDTO personInsertDTO);
 
 
 

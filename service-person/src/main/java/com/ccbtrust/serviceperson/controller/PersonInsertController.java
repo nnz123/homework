@@ -15,10 +15,12 @@ public class PersonInsertController {
     @Autowired
     private PersonInsertService personInsertService;
 
-    @RequestMapping(value = "/insert",method = RequestMethod.POST)
+    /**
+     * 添加员工信息
+     * @param personInsertDTO 员工信息DTO
+     */
+    @RequestMapping(value = "/addPerson",method = RequestMethod.POST)
     public void insert(@RequestBody PersonInsertDTO personInsertDTO){
-        personInsertService.insert(personInsertDTO);
+        personInsertService.addPerson(personInsertDTO);
     }
-
-
 }

@@ -7,12 +7,10 @@ import com.ccbtrust.serviceperson.dao.PersonInsertDao;
 import com.ccbtrust.serviceperson.service.PersonInsertService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-
-import java.util.HashMap;
-import java.util.Map;
+import org.springframework.util.Assert;
 
 /**
+ * 添加操作
  * @author nzhang
  */
 @Service
@@ -22,7 +20,8 @@ public class PersonInsertServiceImpl implements PersonInsertService {
     private PersonInsertDao personInsertDao;
 
     @Override
-    public void insert(PersonInsertDTO personInsertDTO) {
+    public void addPerson(PersonInsertDTO personInsertDTO) {
+        Assert.notNull(personInsertDTO,"员工信息DTO不可以为null");
         try {
             int effectNum = personInsertDao.insert(personInsertDTO);
             if (effectNum <= 0) {

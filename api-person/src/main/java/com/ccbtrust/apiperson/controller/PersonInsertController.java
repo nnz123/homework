@@ -9,6 +9,8 @@ import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+
+import javax.validation.Valid;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
@@ -17,6 +19,7 @@ import java.util.Map;
  * @author nzhang
  */
 @RestController
+@RequestMapping("/person/insert")
 public class PersonInsertController {
 
     @Autowired
@@ -28,8 +31,9 @@ public class PersonInsertController {
      * @return 返回操作是否成功等信息
      */
     @ApiOperation("添加员工信息")
-    @RequestMapping(value = "/person/insert", method = RequestMethod.POST)
-    public Map<String, Object> insert(@ApiParam("员工基本信息personName,cardType, cardNum,phoneNum") PersonInsertVO personInsertVO) {
+    @RequestMapping(value = "/addPerson", method = RequestMethod.POST)
+    public Map<String, Object> insert(@ApiParam("员工基本信息personName,cardType, cardNum,phoneNum")@Valid PersonInsertVO personInsertVO) {
+       //用于携带返回信息
         Map<String, Object> map = new HashMap<>(16);
         PersonInsertDTO personInsertDTO = new PersonInsertDTO();
         //添加用户基础信息
@@ -44,12 +48,12 @@ public class PersonInsertController {
                 personInsertService.insert(personInsertDTO);
             } catch (Exception e) {
                 map.put("success", false);
-                map.put("message", e.toString());
+                map.put("message", "添加员工失败！"+e.toString());
                 return map;
             }
         }
         map.put("success", true);
-        map.put("message", "添加person成功");
+        map.put("message", "添加员工成功！");
         return map;
     }
 

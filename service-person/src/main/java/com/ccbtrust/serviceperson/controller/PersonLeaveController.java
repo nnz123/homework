@@ -16,6 +16,11 @@ public class PersonLeaveController {
     @Autowired
     private PersonLeaveService personLeaveService;
 
+    /**
+     * 员工离职
+     * @param id 员工id
+     * @param editPerson 操作人姓名
+     */
     @RequestMapping(value = "/leave/{id}",method = RequestMethod.PUT)
     public void leave(@PathVariable("id") int id, String editPerson){
         personLeaveService.leave(id,editPerson);

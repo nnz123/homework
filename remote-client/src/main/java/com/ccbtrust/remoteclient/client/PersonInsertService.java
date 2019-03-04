@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 /**
+ * 添加员工
  * @author nzhang
  */
 @FeignClient(value = "service-person")
@@ -13,10 +14,9 @@ public interface PersonInsertService {
 
     /**
      * 增加员工
-     * @param personInsertDTO 增加的用户信息
-     * @return 返回插入的行数
+     * @param personInsertDTO 添加的员工信息DTO
      */
-    @RequestMapping(value = "/insert",method = RequestMethod.POST)
+    @RequestMapping(value = "/addPerson",method = RequestMethod.POST)
     void insert(@RequestBody PersonInsertDTO personInsertDTO);
 
 

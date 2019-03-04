@@ -1,5 +1,6 @@
 package com.ccbtrust.remoteclient.model;
 
+
 import lombok.Data;
 
 /**

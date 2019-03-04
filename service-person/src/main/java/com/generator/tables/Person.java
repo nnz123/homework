@@ -4,6 +4,8 @@
 package com.generator.tables;
 
 
+import com.ccbtrust.remoteclient.enums.PersonStatus;
+import com.ccbtrust.serviceperson.converter.EnumIntegerConverter;
 import com.generator.Homework;
 import com.generator.Keys;
 import com.generator.tables.records.PersonRecord;
@@ -36,7 +38,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Person extends TableImpl<PersonRecord> {
 
-    private static final long serialVersionUID = 149289577;
+    private static final long serialVersionUID = -211638125;
 
     /**
      * The reference instance of <code>homework.person</code>
@@ -84,7 +86,7 @@ public class Person extends TableImpl<PersonRecord> {
     /**
      * The column <code>homework.person.person_status</code>. 0在职，1 离职
      */
-    public final TableField<PersonRecord, Integer> PERSON_STATUS = createField("person_status", org.jooq.impl.SQLDataType.INTEGER.defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "0在职，1 离职");
+    public final TableField<PersonRecord, PersonStatus> PERSON_STATUS = createField("person_status", org.jooq.impl.SQLDataType.INTEGER.defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "0在职，1 离职", new EnumIntegerConverter());
 
     /**
      * The column <code>homework.person.create_person</code>. 员工信息创建人

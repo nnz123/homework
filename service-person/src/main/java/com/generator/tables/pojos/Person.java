@@ -4,6 +4,8 @@
 package com.generator.tables.pojos;
 
 
+import com.ccbtrust.remoteclient.enums.PersonStatus;
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
@@ -23,7 +25,7 @@ import javax.annotation.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Person implements Serializable {
 
-    private static final long serialVersionUID = -1521722684;
+    private static final long serialVersionUID = 1920325207;
 
     private Integer       id;
     private String        personName;
@@ -31,7 +33,7 @@ public class Person implements Serializable {
     private String        cardNum;
     private String        personPicture;
     private String        phoneNum;
-    private Integer       personStatus;
+    private PersonStatus  personStatus;
     private String        createPerson;
     private LocalDateTime createTime;
     private String        editPerson;
@@ -66,7 +68,7 @@ public class Person implements Serializable {
         String        cardNum,
         String        personPicture,
         String        phoneNum,
-        Integer       personStatus,
+        PersonStatus  personStatus,
         String        createPerson,
         LocalDateTime createTime,
         String        editPerson,
@@ -139,11 +141,11 @@ public class Person implements Serializable {
         this.phoneNum = phoneNum;
     }
 
-    public Integer getPersonStatus() {
+    public PersonStatus getPersonStatus() {
         return this.personStatus;
     }
 
-    public void setPersonStatus(Integer personStatus) {
+    public void setPersonStatus(PersonStatus personStatus) {
         this.personStatus = personStatus;
     }
 

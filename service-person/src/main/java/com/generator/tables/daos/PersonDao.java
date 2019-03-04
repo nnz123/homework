@@ -4,6 +4,7 @@
 package com.generator.tables.daos;
 
 
+import com.ccbtrust.remoteclient.enums.PersonStatus;
 import com.generator.tables.Person;
 import com.generator.tables.records.PersonRecord;
 
@@ -103,7 +104,7 @@ public class PersonDao extends DAOImpl<PersonRecord, com.generator.tables.pojos.
     /**
      * Fetch records that have <code>person_status IN (values)</code>
      */
-    public List<com.generator.tables.pojos.Person> fetchByPersonStatus(Integer... values) {
+    public List<com.generator.tables.pojos.Person> fetchByPersonStatus(PersonStatus... values) {
         return fetch(Person.PERSON.PERSON_STATUS, values);
     }
 

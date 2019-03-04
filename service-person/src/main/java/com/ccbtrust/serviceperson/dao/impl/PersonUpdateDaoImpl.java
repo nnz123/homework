@@ -22,7 +22,7 @@ public class PersonUpdateDaoImpl implements PersonUpdateDao {
     private DSLContext dslContext;
     @Override
     public int uploadPicture(int id, String localPictureAddr) {
-        return dslContext.update(PERSON).set(PERSON.PERSON_PICTURE, localPictureAddr).where(PERSON.ID.eq(id)).execute();
+        return dslContext.update(PERSON).set(PERSON.PERSON_PICTURE, localPictureAddr).where(PERSON.ID.eq(id).and(PERSON.DELETE_FLAG.eq(0))).execute();
     }
 
     @Override
@@ -43,6 +43,6 @@ public class PersonUpdateDaoImpl implements PersonUpdateDao {
         if (personUpdateDTO.getEditPerson()!=null){
             updateSet = updateSet.set(PERSON.EDIT_PERSON,personUpdateDTO.getEditPerson());
         }
-        return updateSet.where(PERSON.ID.eq(personUpdateDTO.getId())).execute();
+        return updateSet.where(PERSON.ID.eq(personUpdateDTO.getId()).and(PERSON.DELETE_FLAG.eq(0))).execute();
     }
 }

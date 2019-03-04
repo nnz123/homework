@@ -22,13 +22,14 @@
             <!--数据库名称-->
             <inputSchema>homework</inputSchema>
 
-           <!-- <forcedTypes>
+            <forcedTypes>
                 <forcedType>
-                    <name>ENUM</name>
-                    <expression>.*\.PERSON_STATUS</expression>
+                    <userType>com.ccbtrust.remoteclient.enums.PersonStatus</userType>
+                    <converter>com.ccbtrust.serviceperson.converter.EnumIntegerConverter</converter>
+                    <expression>person_status</expression>
                     <types>.*</types>
                 </forcedType>
-            </forcedTypes>-->
+            </forcedTypes>
         </database>
 
         <generate>

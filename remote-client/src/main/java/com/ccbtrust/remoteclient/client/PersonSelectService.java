@@ -22,7 +22,7 @@ public interface PersonSelectService {
      * @param id 员工id
      * @return 返回根基id查询到的员工信息
      */
-    @RequestMapping(value = "/select/selectById/{id}",method = RequestMethod.GET)
+    @RequestMapping(value = "/selectById/{id}",method = RequestMethod.GET)
     PersonSelectResultDTO selectById(@PathVariable("id") int id);
 
 
@@ -31,7 +31,7 @@ public interface PersonSelectService {
      * @param cardNum 员工证件号码
      * @return 返回根基证件号码查询到的员工信息
      */
-    @RequestMapping(value = "/select/selectByCardNum/{cardNum}",method = RequestMethod.GET)
+    @RequestMapping(value = "/selectByCardNum/{cardNum}",method = RequestMethod.GET)
     PersonSelectResultDTO selectByCardNum(@PathVariable("cardNum") String cardNum);
 
 
@@ -41,7 +41,7 @@ public interface PersonSelectService {
      * @param pageSize 每页显示的条数
      * @return 查询到的员工信息列表
      */
-    @RequestMapping(value = "/select/selectAll/{pageNum}/{pageSize}",method = RequestMethod.GET)
+    @RequestMapping(value = "/selectAll/{pageNum}/{pageSize}",method = RequestMethod.GET)
     List<PersonSelectResultDTO> selectAll(@PathVariable("pageNum") int pageNum, @PathVariable("pageSize") int pageSize);
 
     /**
@@ -49,7 +49,7 @@ public interface PersonSelectService {
      * @param personSelectConditionsDTO 查询条件
      * @return 返回查询结果
      */
-    @RequestMapping(value = "/select/selectByConditions",method = RequestMethod.POST)
+    @RequestMapping(value = "/selectByConditions",method = RequestMethod.POST)
     List<PersonSelectResultDTO> selectByConditions(@RequestBody PersonSelectConditionsDTO personSelectConditionsDTO);
 
 

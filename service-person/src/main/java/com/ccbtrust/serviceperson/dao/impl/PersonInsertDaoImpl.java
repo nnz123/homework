@@ -12,6 +12,7 @@ import static com.generator.tables.Person.PERSON;
 
 
 /**
+ * 添加数据操作
  * @author nzhang
  */
 @Repository
@@ -19,12 +20,16 @@ public class PersonInsertDaoImpl implements PersonInsertDao {
     @Autowired
     private DSLContext dslContext;
 
+    /**
+     * 添加员工
+     * @param  personInsertDTO 员工信息
+     * @return 返回插入的行数
+     */
     @Override
     public int insert(PersonInsertDTO personInsertDTO) {
-        int effectNum = dslContext.insertInto(PERSON)
-                .columns(PERSON.PERSON_NAME, PERSON.CARD_TYPE, PERSON.CARD_NUM, PERSON.PERSON_PICTURE, PERSON.PHONE_NUM, PERSON.CREATE_PERSON,PERSON.CREATE_TIME)
+        return dslContext.insertInto(PERSON)
+                .columns(PERSON.PERSON_NAME, PERSON.CARD_TYPE, PERSON.CARD_NUM, PERSON.PERSON_PICTURE, PERSON.PHONE_NUM, PERSON.CREATE_PERSON, PERSON.CREATE_TIME)
                 .values(personInsertDTO.getPersonName(), personInsertDTO.getCardType(), personInsertDTO.getCardNum(), personInsertDTO.getPersonPicture(), personInsertDTO.getPhoneNum(), personInsertDTO.getCreatePerson(), LocalDateTime.now()).execute();
-        return effectNum;
     }
 
 

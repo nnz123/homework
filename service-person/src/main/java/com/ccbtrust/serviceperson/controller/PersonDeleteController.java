@@ -18,7 +18,12 @@ public class PersonDeleteController {
     @Autowired
     private PersonDeleteService personDeleteService;
 
-    @RequestMapping(value = "/delete/{id}",method = RequestMethod.PUT)
+    /**
+     * 根据id删除员工
+     * @param id 员工id
+     * @param deletePerson 删除操作者姓名
+     */
+    @RequestMapping(value = "/deleteById/{id}",method = RequestMethod.PUT)
     public void deleteById(@PathVariable("id") int id,String deletePerson){
         personDeleteService.deleteById(id,deletePerson);
     }

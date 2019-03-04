@@ -2,6 +2,9 @@ package com.ccbtrust.apiperson.model;
 
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
+
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Past;
 import java.time.LocalDateTime;
 
 /**
@@ -9,6 +12,7 @@ import java.time.LocalDateTime;
  */
 @Data
 public class PersonSelectConditionsVO {
+
     private String        personName;
     private Integer       cardType;
     private String        createPerson;
@@ -18,6 +22,8 @@ public class PersonSelectConditionsVO {
      */
     @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createTime;
+    @Min(1)
     private Integer       pageNum;
+    @Min(1)
     private Integer       pageSize;
 }

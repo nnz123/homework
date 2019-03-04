@@ -3,8 +3,7 @@ package com.ccbtrust.serviceperson.dao.impl;
 import com.ccbtrust.remoteclient.model.PersonSelectConditionsDTO;
 import com.ccbtrust.remoteclient.model.PersonSelectResultDTO;
 import com.ccbtrust.serviceperson.dao.PersonSelectDao;
-import org.jooq.Condition;
-import org.jooq.DSLContext;
+import org.jooq.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -29,11 +28,10 @@ public class PersonSelectDaoImpl implements PersonSelectDao {
      * @return 查询到的员工信息
      */
     @Override
-    public PersonSelectResultDTO selectById(int id) {
-        List<PersonSelectResultDTO> personList = dslContext.select().from(PERSON).where(PERSON.ID.eq(id).and(PERSON.DELETE_FLAG.eq(0))).fetchInto(PersonSelectResultDTO.class);
-        return personList.get(0);
-    }
+    public List<PersonSelectResultDTO> selectById(int id) {
+        return dslContext.select().from(PERSON).where(PERSON.ID.eq(id).and(PERSON.DELETE_FLAG.eq(0))).fetchInto(PersonSelectResultDTO.class);
 
+    }
 
     /**
      * 根据证件号码查询员工
@@ -41,9 +39,9 @@ public class PersonSelectDaoImpl implements PersonSelectDao {
      * @return 查询到的员工信息
      */
     @Override
-    public PersonSelectResultDTO selectByCardNum(String cardNum) {
-        List<PersonSelectResultDTO> personList = dslContext.select().from(PERSON).where(PERSON.CARD_NUM.eq(cardNum).and(PERSON.DELETE_FLAG.eq(0))).fetchInto(PersonSelectResultDTO.class);
-        return personList.get(0);
+    public List<PersonSelectResultDTO> selectByCardNum(String cardNum) {
+       return dslContext.select().from(PERSON).where(PERSON.CARD_NUM.eq(cardNum).and(PERSON.DELETE_FLAG.eq(0))).fetchInto(PersonSelectResultDTO.class);
+
     }
 
     /**
@@ -76,9 +74,11 @@ public class PersonSelectDaoImpl implements PersonSelectDao {
             conditions.add(PERSON.CREATE_PERSON.eq(personSelectConditionsDTO.getCreatePerson()));
         }
         if (personSelectConditionsDTO.getCreateTime()!=null){
+            //创建时间在这之后的
             conditions.add(PERSON.CREATE_TIME.greaterOrEqual(personSelectConditionsDTO.getCreateTime()));
         }
         conditions.add(PERSON.DELETE_FLAG.eq(0));
+
         List<PersonSelectResultDTO> personSelectResultDTOList = dslContext.select().from(PERSON).where(conditions).limit(personSelectConditionsDTO.getPageSize()).offset((personSelectConditionsDTO.getPageNum() - 1) * personSelectConditionsDTO.getPageSize()).fetchInto(PersonSelectResultDTO.class);
         return personSelectResultDTOList;
     }

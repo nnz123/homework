@@ -15,13 +15,13 @@ public interface PersonUpdateService {
      * @param id 用户id
      * @param localPictureAddr 用户头像存储地址
      */
-    @RequestMapping(value = "/update/uploadPicture/{id}",method = RequestMethod.PUT)
+    @RequestMapping(value = "/uploadPicture/{id}",method = RequestMethod.PUT)
     void uploadPicture(@PathVariable("id") int id, @RequestParam("localPictureAddr") String localPictureAddr);
 
     /**
      * 修改员工基本信息
      * @param personUpdateDTO 员工基本信息DTO
      */
-    @RequestMapping(value = "/update/updatePersonInfo", method = RequestMethod.PUT)
+    @RequestMapping(value = "/updatePersonInfo", method = RequestMethod.PUT)
     void updatePersonInfo(@RequestBody PersonUpdateDTO personUpdateDTO);
 }

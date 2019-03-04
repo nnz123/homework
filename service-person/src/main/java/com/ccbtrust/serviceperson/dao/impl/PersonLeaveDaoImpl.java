@@ -1,5 +1,6 @@
 package com.ccbtrust.serviceperson.dao.impl;
 
+import com.ccbtrust.remoteclient.enums.PersonStatus;
 import com.ccbtrust.serviceperson.dao.PersonLeaveDao;
 import org.jooq.DSLContext;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ public class PersonLeaveDaoImpl implements PersonLeaveDao {
 
     @Override
     public int leave(int id,String editPerson) {
-        return  dslContext.update(PERSON).set(PERSON.PERSON_STATUS, 1).set(PERSON.EDIT_PERSON,editPerson).set(PERSON.EDIT_TIME, LocalDateTime.now()).where(PERSON.ID.eq(id)).execute();
+        return  dslContext.update(PERSON).set(PERSON.PERSON_STATUS, PersonStatus.LeaveOffice).set(PERSON.EDIT_PERSON,editPerson).set(PERSON.EDIT_TIME, LocalDateTime.now()).where(PERSON.ID.eq(id).and(PERSON.DELETE_FLAG.eq(0))).execute();
 
     }
 }

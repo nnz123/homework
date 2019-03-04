@@ -5,6 +5,7 @@ import com.ccbtrust.serviceperson.dao.PersonLeaveDao;
 import com.ccbtrust.serviceperson.service.PersonLeaveService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
 
 /**
  * 员工离职
@@ -17,10 +18,11 @@ public class PersonLeaveServiceImpl implements PersonLeaveService {
 
     @Override
     public void leave(int id,String editPerson) {
+        Assert.notNull(editPerson,"操作人姓名不能为null");
         try {
             int  effectNum = personLeaveDao.leave(id,editPerson);
             if (effectNum<=0){
-                throw new PersonException("更改员工状态失败");
+                throw new PersonException("该员工不存在");
             }
         }catch (Exception e){
             throw new PersonException(e.getMessage());
