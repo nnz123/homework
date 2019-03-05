@@ -1,5 +1,6 @@
 package com.ccbtrust.remoteclient.model;
 
+import com.ccbtrust.remoteclient.enums.PersonCardType;
 import lombok.Data;
 
 /**
@@ -10,7 +11,7 @@ import lombok.Data;
 public class PersonUpdateDTO {
     private Integer            id;
     private String             personName;
-    private Integer            cardType;
+    private PersonCardType     cardType;
     private String             cardNum;
     private String             phoneNum;
     private String             editPerson;

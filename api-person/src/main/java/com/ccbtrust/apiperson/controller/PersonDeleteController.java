@@ -6,26 +6,22 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import java.util.HashMap;
-import java.util.Map;
+
 
 /**
  * 删除员工
  * @author nzhang
  */
 @RestController
-@RequestMapping("/person/delete")
+@RequestMapping("/person")
 public class PersonDeleteController {
 
     @Autowired
     private PersonDeleteService personDeleteService;
-    /**
-     * 根据id 删除信息
-     * @param id 员工id
-     */
+
     @ApiOperation("根据id删除员工信息")
     @RequestMapping(value = "deleteById/{id}",method = RequestMethod.PUT)
-    public Result deleteById(@ApiParam("员工id") @PathVariable("id")int id) {
+    public Result deleteById(@ApiParam(value = "员工id",required = true) @PathVariable("id")Integer id) {
         //设定默认的删除操作者姓名
         String deletePerson = "Tom";
         try {

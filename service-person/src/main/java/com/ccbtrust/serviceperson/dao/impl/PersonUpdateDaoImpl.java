@@ -21,7 +21,7 @@ public class PersonUpdateDaoImpl implements PersonUpdateDao {
     @Autowired
     private DSLContext dslContext;
     @Override
-    public int uploadPicture(int id, String localPictureAddr) {
+    public int uploadPicture(Integer id, String localPictureAddr) {
         return dslContext.update(PERSON).set(PERSON.PERSON_PICTURE, localPictureAddr).where(PERSON.ID.eq(id).and(PERSON.DELETE_FLAG.eq(0))).execute();
     }
 

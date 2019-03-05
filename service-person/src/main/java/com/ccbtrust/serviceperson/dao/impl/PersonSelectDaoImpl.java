@@ -6,11 +6,8 @@ import com.ccbtrust.serviceperson.dao.PersonSelectDao;
 import org.jooq.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-
 import static com.generator.tables.Person.PERSON;
 
 /**
@@ -28,7 +25,7 @@ public class PersonSelectDaoImpl implements PersonSelectDao {
      * @return 查询到的员工信息
      */
     @Override
-    public List<PersonSelectResultDTO> selectById(int id) {
+    public List<PersonSelectResultDTO> selectById(Integer id) {
         return dslContext.select().from(PERSON).where(PERSON.ID.eq(id).and(PERSON.DELETE_FLAG.eq(0))).fetchInto(PersonSelectResultDTO.class);
 
     }
@@ -51,9 +48,8 @@ public class PersonSelectDaoImpl implements PersonSelectDao {
      * @return 查询到的所有员工列表
      */
     @Override
-    public List<PersonSelectResultDTO> selectAll(int pageNum, int pageSize) {
-        List<PersonSelectResultDTO> personSelectResultDTOList = dslContext.select().from(PERSON).where(PERSON.DELETE_FLAG.eq(0)).limit(pageSize).offset(pageSize*(pageNum-1)).fetchInto(PersonSelectResultDTO.class);
-        return personSelectResultDTOList;
+    public List<PersonSelectResultDTO> selectAll(Integer pageNum, Integer pageSize) {
+        return dslContext.select().from(PERSON).where(PERSON.DELETE_FLAG.eq(0)).limit(pageSize).offset(pageSize*(pageNum-1)).fetchInto(PersonSelectResultDTO.class);
     }
 
     /**
@@ -77,11 +73,16 @@ public class PersonSelectDaoImpl implements PersonSelectDao {
             //创建时间在这之后的
             conditions.add(PERSON.CREATE_TIME.greaterOrEqual(personSelectConditionsDTO.getCreateTime()));
         }
+
+        if (personSelectConditionsDTO.getEditPerson()!=null){
+            conditions.add(PERSON.EDIT_PERSON.eq(personSelectConditionsDTO.getEditPerson()));
+        }
+
+        if (personSelectConditionsDTO.getPersonStatus()!=null){
+           conditions.add(PERSON.PERSON_STATUS.eq(personSelectConditionsDTO.getPersonStatus()));
+        }
         conditions.add(PERSON.DELETE_FLAG.eq(0));
-
-        List<PersonSelectResultDTO> personSelectResultDTOList = dslContext.select().from(PERSON).where(conditions).limit(personSelectConditionsDTO.getPageSize()).offset((personSelectConditionsDTO.getPageNum() - 1) * personSelectConditionsDTO.getPageSize()).fetchInto(PersonSelectResultDTO.class);
-        return personSelectResultDTOList;
+        return dslContext.select().from(PERSON).where(conditions).limit(personSelectConditionsDTO.getPageSize()).offset((personSelectConditionsDTO.getPageNum() - 1) * personSelectConditionsDTO.getPageSize()).fetchInto(PersonSelectResultDTO.class);
     }
-
 
 }

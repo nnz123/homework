@@ -19,5 +19,5 @@ public interface PersonLeaveService {
      * @param editPerson 操作人姓名
      */
     @RequestMapping(value = "/leave/{id}",method = RequestMethod.PUT)
-    void leave(@PathVariable("id") int id, @RequestParam("editPerson") String editPerson);
+    void leave(@PathVariable("id") Integer id, @RequestParam("editPerson") String editPerson);
 }

@@ -12,5 +12,5 @@ public interface PersonLeaveDao {
      * @param editPerson 修改人
      * @return 反回修改的信息条数
      */
-    int leave(int id,String editPerson);
+    int leave(Integer id,String editPerson);
 }

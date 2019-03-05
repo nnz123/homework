@@ -20,7 +20,7 @@ public class PersonLeaveDaoImpl implements PersonLeaveDao {
     private DSLContext dslContext;
 
     @Override
-    public int leave(int id,String editPerson) {
+    public int leave(Integer id,String editPerson) {
         return  dslContext.update(PERSON).set(PERSON.PERSON_STATUS, PersonStatus.LeaveOffice).set(PERSON.EDIT_PERSON,editPerson).set(PERSON.EDIT_TIME, LocalDateTime.now()).where(PERSON.ID.eq(id).and(PERSON.DELETE_FLAG.eq(0))).execute();
 
     }

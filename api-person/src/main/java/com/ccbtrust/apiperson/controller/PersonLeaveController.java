@@ -11,15 +11,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * 员工离职
  * @author nzhang
  */
 @RestController
-@RequestMapping("/person/update")
+@RequestMapping("/person")
 public class PersonLeaveController {
     @Autowired
     private PersonLeaveService personLeaveService;
@@ -27,15 +25,9 @@ public class PersonLeaveController {
     @Autowired
     private AmqpTemplate amqpTemplate;
 
-    /**
-     * 员工离职
-     * @param id 员工id
-     * @return 返回是否离职成功等信息
-     */
     @ApiOperation("员工离职")
     @RequestMapping(value = "/leave/{id}",method = RequestMethod.PUT)
-    public Result leave(@ApiParam("员工id") @PathVariable("id") int id){
-
+    public Result leave(@ApiParam(value = "员工id",required = true) @PathVariable("id") Integer id){
         //设置默认的操作人姓名
         String editPerson = "Jack";
         try {
@@ -43,11 +35,9 @@ public class PersonLeaveController {
         } catch (Exception e) {
             return new Result(false,e.getMessage());
         }
+        //向第三方发送离职消息
         amqpTemplate.convertAndSend("leave","员工id:"+id+"离职");
-
         return new Result<>(true,null,id+"号员工离职成功！");
     }
-
-
 
 }

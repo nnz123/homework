@@ -4,6 +4,7 @@
 package com.generator.tables.pojos;
 
 
+import com.ccbtrust.remoteclient.enums.PersonCardType;
 import com.ccbtrust.remoteclient.enums.PersonStatus;
 
 import java.io.Serializable;
@@ -25,22 +26,22 @@ import javax.annotation.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Person implements Serializable {
 
-    private static final long serialVersionUID = 1920325207;
+    private static final long serialVersionUID = -2121021708;
 
-    private Integer       id;
-    private String        personName;
-    private Integer       cardType;
-    private String        cardNum;
-    private String        personPicture;
-    private String        phoneNum;
-    private PersonStatus  personStatus;
-    private String        createPerson;
-    private LocalDateTime createTime;
-    private String        editPerson;
-    private LocalDateTime editTime;
-    private String        deletePerson;
-    private LocalDateTime deleteTime;
-    private Integer       deleteFlag;
+    private Integer        id;
+    private String         personName;
+    private PersonCardType cardType;
+    private String         cardNum;
+    private String         personPicture;
+    private String         phoneNum;
+    private PersonStatus   personStatus;
+    private String         createPerson;
+    private LocalDateTime  createTime;
+    private String         editPerson;
+    private LocalDateTime  editTime;
+    private String         deletePerson;
+    private LocalDateTime  deleteTime;
+    private Integer        deleteFlag;
 
     public Person() {}
 
@@ -62,20 +63,20 @@ public class Person implements Serializable {
     }
 
     public Person(
-        Integer       id,
-        String        personName,
-        Integer       cardType,
-        String        cardNum,
-        String        personPicture,
-        String        phoneNum,
-        PersonStatus  personStatus,
-        String        createPerson,
-        LocalDateTime createTime,
-        String        editPerson,
-        LocalDateTime editTime,
-        String        deletePerson,
-        LocalDateTime deleteTime,
-        Integer       deleteFlag
+        Integer        id,
+        String         personName,
+        PersonCardType cardType,
+        String         cardNum,
+        String         personPicture,
+        String         phoneNum,
+        PersonStatus   personStatus,
+        String         createPerson,
+        LocalDateTime  createTime,
+        String         editPerson,
+        LocalDateTime  editTime,
+        String         deletePerson,
+        LocalDateTime  deleteTime,
+        Integer        deleteFlag
     ) {
         this.id = id;
         this.personName = personName;
@@ -109,11 +110,11 @@ public class Person implements Serializable {
         this.personName = personName;
     }
 
-    public Integer getCardType() {
+    public PersonCardType getCardType() {
         return this.cardType;
     }
 
-    public void setCardType(Integer cardType) {
+    public void setCardType(PersonCardType cardType) {
         this.cardType = cardType;
     }
 

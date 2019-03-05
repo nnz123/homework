@@ -4,8 +4,10 @@
 package com.generator.tables;
 
 
+import com.ccbtrust.remoteclient.enums.PersonCardType;
 import com.ccbtrust.remoteclient.enums.PersonStatus;
 import com.ccbtrust.serviceperson.converter.EnumIntegerConverter;
+import com.ccbtrust.serviceperson.converter.EnumIntegerConverterCardType;
 import com.generator.Homework;
 import com.generator.Keys;
 import com.generator.tables.records.PersonRecord;
@@ -38,7 +40,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Person extends TableImpl<PersonRecord> {
 
-    private static final long serialVersionUID = -211638125;
+    private static final long serialVersionUID = 1698452751;
 
     /**
      * The reference instance of <code>homework.person</code>
@@ -66,7 +68,7 @@ public class Person extends TableImpl<PersonRecord> {
     /**
      * The column <code>homework.person.card_type</code>. 员工证件类型0身份证1护照
      */
-    public final TableField<PersonRecord, Integer> CARD_TYPE = createField("card_type", org.jooq.impl.SQLDataType.INTEGER.defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "员工证件类型0身份证1护照");
+    public final TableField<PersonRecord, PersonCardType> CARD_TYPE = createField("card_type", org.jooq.impl.SQLDataType.INTEGER.defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "员工证件类型0身份证1护照", new EnumIntegerConverterCardType());
 
     /**
      * The column <code>homework.person.card_num</code>. 证件号码

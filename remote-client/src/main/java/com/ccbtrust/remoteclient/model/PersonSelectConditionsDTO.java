@@ -1,8 +1,8 @@
 package com.ccbtrust.remoteclient.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
+import com.ccbtrust.remoteclient.enums.PersonCardType;
+import com.ccbtrust.remoteclient.enums.PersonStatus;
 import lombok.Data;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 /**
@@ -11,10 +11,12 @@ import java.time.LocalDateTime;
  */
 @Data
 public class PersonSelectConditionsDTO {
-    private String        personName;
-    private Integer       cardType;
-    private String        createPerson;
+    private String            personName;
+    private PersonCardType    cardType;
+    private PersonStatus      personStatus;
+    private String            createPerson;
     private LocalDateTime     createTime;
-    private Integer       pageNum;
-    private Integer       pageSize;
+    private String            editPerson;
+    private Integer           pageNum;
+    private Integer           pageSize;
 }

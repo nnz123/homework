@@ -23,7 +23,7 @@ public interface PersonSelectService {
      * @return 返回根基id查询到的员工信息
      */
     @RequestMapping(value = "/selectById/{id}",method = RequestMethod.GET)
-    PersonSelectResultDTO selectById(@PathVariable("id") int id);
+    PersonSelectResultDTO selectById(@PathVariable("id") Integer id);
 
 
     /**
@@ -42,7 +42,7 @@ public interface PersonSelectService {
      * @return 查询到的员工信息列表
      */
     @RequestMapping(value = "/selectAll/{pageNum}/{pageSize}",method = RequestMethod.GET)
-    List<PersonSelectResultDTO> selectAll(@PathVariable("pageNum") int pageNum, @PathVariable("pageSize") int pageSize);
+    List<PersonSelectResultDTO> selectAll(@PathVariable("pageNum") Integer pageNum, @PathVariable("pageSize") Integer pageSize);
 
     /**
      * 通过组合条件查询

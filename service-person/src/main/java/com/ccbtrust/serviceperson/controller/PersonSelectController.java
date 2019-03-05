@@ -18,7 +18,7 @@ public class PersonSelectController {
     private PersonSelectService personSelectService;
 
     @RequestMapping(value = "/selectById/{id}",method = RequestMethod.GET)
-    public PersonSelectResultDTO selectById(@PathVariable("id") int id){
+    public PersonSelectResultDTO selectById(@PathVariable("id") Integer id){
         return personSelectService.selectById(id);
     }
 
@@ -28,7 +28,7 @@ public class PersonSelectController {
     }
 
     @RequestMapping(value = "/selectAll/{pageNum}/{pageSize}",method = RequestMethod.GET)
-    public List<PersonSelectResultDTO> selectAll(@PathVariable("pageNum") int pageNum, @PathVariable("pageSize") int pageSize){
+    public List<PersonSelectResultDTO> selectAll(@PathVariable("pageNum") Integer pageNum, @PathVariable("pageSize") Integer pageSize){
         return personSelectService.selectAll(pageNum,pageSize);
     }
 

@@ -22,7 +22,7 @@ public class PersonLeaveController {
      * @param editPerson 操作人姓名
      */
     @RequestMapping(value = "/leave/{id}",method = RequestMethod.PUT)
-    public void leave(@PathVariable("id") int id, String editPerson){
+    public void leave(@PathVariable("id") Integer id, String editPerson){
         personLeaveService.leave(id,editPerson);
     }
 

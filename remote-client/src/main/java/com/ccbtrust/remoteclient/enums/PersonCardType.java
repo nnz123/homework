@@ -12,7 +12,7 @@ public enum PersonCardType {
     /**
      *护照
      */
-    PassPort(1,"护照");
+    Passport(1,"护照");
     private int state;
     private String stateInfo;
 

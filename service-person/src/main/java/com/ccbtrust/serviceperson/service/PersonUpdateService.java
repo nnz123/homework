@@ -12,7 +12,7 @@ public interface PersonUpdateService {
      * @param id 员工id
      * @param localPictureAddr  员工头像保存地址
      */
-    void uploadPicture(int id,String localPictureAddr);
+    void uploadPicture(Integer id,String localPictureAddr);
 
     /**
      * 修改员工基本信息

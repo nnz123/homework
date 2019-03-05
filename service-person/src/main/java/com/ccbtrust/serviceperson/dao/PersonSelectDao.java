@@ -14,7 +14,7 @@ public interface PersonSelectDao{
      * @param id 员工id
      * @return 查询到的员工信息
      */
-    List<PersonSelectResultDTO> selectById(int id);
+    List<PersonSelectResultDTO> selectById(Integer id);
 
     /**
      * 根据员工证件号码查询员工
@@ -29,7 +29,7 @@ public interface PersonSelectDao{
      * @param pageSize 每页显示的条数
      * @return  查询到的结果
      */
-    List<PersonSelectResultDTO> selectAll(int pageNum, int pageSize);
+    List<PersonSelectResultDTO> selectAll(Integer pageNum, Integer pageSize);
 
     /**
      * 根据组合条件查找员工

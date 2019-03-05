@@ -16,7 +16,7 @@ public interface PersonUpdateService {
      * @param localPictureAddr 用户头像存储地址
      */
     @RequestMapping(value = "/uploadPicture/{id}",method = RequestMethod.PUT)
-    void uploadPicture(@PathVariable("id") int id, @RequestParam("localPictureAddr") String localPictureAddr);
+    void uploadPicture(@PathVariable("id") Integer id, @RequestParam("localPictureAddr") String localPictureAddr);
 
     /**
      * 修改员工基本信息

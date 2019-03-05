@@ -29,6 +29,13 @@
                     <expression>person_status</expression>
                     <types>.*</types>
                 </forcedType>
+
+                <forcedType>
+                    <userType>com.ccbtrust.remoteclient.enums.PersonCardType</userType>
+                    <converter>com.ccbtrust.serviceperson.converter.EnumIntegerConverterCardType</converter>
+                    <expression>card_type</expression>
+                    <types>.*</types>
+                </forcedType>
             </forcedTypes>
         </database>
 

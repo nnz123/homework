@@ -4,6 +4,7 @@
 package com.generator.tables.daos;
 
 
+import com.ccbtrust.remoteclient.enums.PersonCardType;
 import com.ccbtrust.remoteclient.enums.PersonStatus;
 import com.generator.tables.Person;
 import com.generator.tables.records.PersonRecord;
@@ -76,7 +77,7 @@ public class PersonDao extends DAOImpl<PersonRecord, com.generator.tables.pojos.
     /**
      * Fetch records that have <code>card_type IN (values)</code>
      */
-    public List<com.generator.tables.pojos.Person> fetchByCardType(Integer... values) {
+    public List<com.generator.tables.pojos.Person> fetchByCardType(PersonCardType... values) {
         return fetch(Person.PERSON.CARD_TYPE, values);
     }
 

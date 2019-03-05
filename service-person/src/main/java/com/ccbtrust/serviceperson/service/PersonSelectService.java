@@ -15,7 +15,7 @@ public interface PersonSelectService {
      * @param id 员工id
      * @return 反回查询到的员工
      */
-    PersonSelectResultDTO selectById(int id);
+    PersonSelectResultDTO selectById(Integer id);
 
     /**
      * 根据证件号码查询员工
@@ -30,7 +30,7 @@ public interface PersonSelectService {
      * @param pageSize 每页显示的条数
      * @return 员工信息列表
      */
-    List<PersonSelectResultDTO> selectAll(int pageNum, int pageSize);
+    List<PersonSelectResultDTO> selectAll(Integer pageNum, Integer pageSize);
 
     /**
      * 根据组合条件查询员工

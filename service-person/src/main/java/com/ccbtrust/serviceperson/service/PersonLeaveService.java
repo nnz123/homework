@@ -10,5 +10,5 @@ public interface PersonLeaveService {
      * @param id 员工id
      * @param  editPerson 操作人姓名
      */
-    void leave(int id,String editPerson);
+    void leave(Integer id,String editPerson);
 }

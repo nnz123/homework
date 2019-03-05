@@ -11,5 +11,5 @@ public interface PersonDeleteDao {
      * @param deletePerson 删除人姓名
      * @return  返回删除的行数
      */
-    int deleteById(int id,String deletePerson);
+    int deleteById(Integer id,String deletePerson);
 }

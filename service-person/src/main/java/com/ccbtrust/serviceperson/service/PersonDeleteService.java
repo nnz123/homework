@@ -8,8 +8,7 @@ public interface PersonDeleteService {
     /**
      * 通过id删除员工
      * @param id 员工id
-     * @param deletePerson 删除操着者姓名
-     * @return 返回删除的信息条数
+     * @param deletePerson 删除操作者姓名
      */
-   void deleteById(int id,String deletePerson);
+   void deleteById(Integer id,String deletePerson);
 }

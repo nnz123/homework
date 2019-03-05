@@ -15,7 +15,7 @@ public interface PersonUpdateDao {
      * @param localPictureAddr 员工头像存储地址
      * @return 反回修改的条数
      */
-    int uploadPicture(int id, String localPictureAddr);
+    int uploadPicture(Integer id, String localPictureAddr);
 
     /**
      * 修改员工基本信息

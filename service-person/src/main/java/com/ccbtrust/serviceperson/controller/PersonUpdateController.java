@@ -21,7 +21,7 @@ public class PersonUpdateController {
      * @param localPictureAddr 头像存储地址
      */
     @RequestMapping(value = "/uploadPicture/{id}",method = RequestMethod.PUT)
-    public void updatePicture(@PathVariable("id") int id, String localPictureAddr){
+    public void updatePicture(@PathVariable("id") Integer id, String localPictureAddr){
         personUpdateService.uploadPicture(id,localPictureAddr);
     }
 

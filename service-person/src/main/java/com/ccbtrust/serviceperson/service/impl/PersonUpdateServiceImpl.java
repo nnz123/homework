@@ -19,8 +19,9 @@ public class PersonUpdateServiceImpl implements PersonUpdateService {
     private PersonUpdateDao personUpdateDao;
 
     @Override
-    public void uploadPicture(int id, String localPictureAddr) {
-        Assert.notNull(localPictureAddr,"头像存储地址不能为null");
+    public void uploadPicture(Integer id, String localPictureAddr) {
+        Assert.notNull(localPictureAddr,"头像存储地址不能为空");
+        Assert.notNull(id,"上传头像的用户id不能为空");
         try {
             int effectNum = personUpdateDao.uploadPicture(id, localPictureAddr);
             if (effectNum<=0){
@@ -33,7 +34,7 @@ public class PersonUpdateServiceImpl implements PersonUpdateService {
 
     @Override
     public void updatePersonInfo(PersonUpdateDTO personUpdateDTO) {
-        Assert.notNull(personUpdateDTO,"员工基本信息不能为null");
+        Assert.notNull(personUpdateDTO.getId(),"员工id不能为空");
         try {
             int effectNum = personUpdateDao.updatePersonInfo(personUpdateDTO);
             if (effectNum<=0){

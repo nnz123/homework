@@ -18,13 +18,13 @@ public class PersonDeleteServiceImpl implements PersonDeleteService {
     private PersonDeleteDao personDeleteDao;
 
     @Override
-    public void deleteById(int id,String deletePerson){
-        Assert.notNull(deletePerson,"删除人姓名不能为null");
-            int effectNum;
+    public void deleteById(Integer id,String deletePerson){
+        Assert.notNull(deletePerson,"删除人姓名不能为空");
+        Assert.notNull(id,"被删除人的id不能为空");
             try {
-                 effectNum = personDeleteDao.deleteById(id,deletePerson);
+                 int effectNum = personDeleteDao.deleteById(id,deletePerson);
                 if (effectNum<=0){
-                    throw new PersonException("将要删除的员工不存在");
+                    throw new PersonException("将要删除的员工不存在！");
                 }
             }catch (Exception e){
                 throw new PersonException(e.getMessage());

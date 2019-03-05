@@ -24,7 +24,7 @@ public class PersonDeleteController {
      * @param deletePerson 删除操作者姓名
      */
     @RequestMapping(value = "/deleteById/{id}",method = RequestMethod.PUT)
-    public void deleteById(@PathVariable("id") int id,String deletePerson){
+    public void deleteById(@PathVariable("id") Integer id,String deletePerson){
         personDeleteService.deleteById(id,deletePerson);
     }
 }
