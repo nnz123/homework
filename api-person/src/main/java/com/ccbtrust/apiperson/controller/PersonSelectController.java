@@ -6,22 +6,17 @@ import com.ccbtrust.remoteclient.client.PersonSelectService;
 import com.ccbtrust.remoteclient.model.PersonSelectConditionsDTO;
 import com.ccbtrust.remoteclient.model.PersonSelectResultDTO;
 import com.ccbtrust.remoteclient.model.Result;
-import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import javax.validation.Valid;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * 查询员工
- *
  * @author nzhang
+ *
  */
 @RestController
 @RequestMapping("/person")
@@ -35,15 +30,17 @@ public class PersonSelectController {
         PersonSelectResultDTO personSelectResultDTO;
         try {
             personSelectResultDTO = personSelectService.selectById(id);
-        } catch (Exception e) {
+        }catch (Exception e) {
             return new Result<>(false, e.getMessage());
+        }
+        if (personSelectResultDTO==null){
+            return new Result<>(false,"所查询的员工不存在！");
         }
         PersonSelectResultVO personSelectResultVO = new PersonSelectResultVO();
         //将DTO转换为VO
         selectResultDTOToVo(personSelectResultDTO, personSelectResultVO);
         return new Result<>(true, personSelectResultVO, "查询成功！");
     }
-
 
     @ApiOperation("根据证件号码查询员工")
     @RequestMapping(value = "/selectByCardNum/{cardNum}", method = RequestMethod.GET)
@@ -54,21 +51,20 @@ public class PersonSelectController {
         } catch (Exception e) {
             return new Result<>(false, e.getMessage());
         }
+        if (personSelectResultDTO==null){
+            return new Result<>(false,"所查询的员工不存在！");
+        }
         PersonSelectResultVO personSelectResultVO = new PersonSelectResultVO();
         //将DTO转换为VO
         selectResultDTOToVo(personSelectResultDTO, personSelectResultVO);
         return new Result<>(true, personSelectResultVO, "查询成功！");
     }
 
-
     @ApiOperation("查询所有员工信息")
     @RequestMapping(value = "/selectAll/{pageNum}/{pageSize}", method = RequestMethod.GET)
     public Result<List<PersonSelectResultVO>> selectAll(@ApiParam(value = "页码",required = true) @PathVariable("pageNum") Integer pageNum, @ApiParam(value = "每页显示条数",required = true) @PathVariable("pageSize") Integer pageSize) {
         List<PersonSelectResultDTO> personSelectResultDTOList;
         try {
-            if (pageNum < 1 || pageSize < 1) {
-                return new Result<>(false, "请输入正确的页码和每页显示的条数");
-            }
             personSelectResultDTOList = personSelectService.selectAll(pageNum, pageSize);
         } catch (Exception e) {
             return new Result<>(false, e.getMessage());
@@ -115,7 +111,6 @@ public class PersonSelectController {
 
     /**
      * 将查询结果由DTO转换为VO
-     *
      * @param personSelectResultDTO 查询结果DTO
      * @param personSelectResultVO  查询结果VO
      */

@@ -24,21 +24,15 @@ public enum PersonCardType {
     public int getState() {
         return state;
     }
-
-
     public String getStateInfo() {
         return stateInfo;
     }
-
-
     public void setState(int state) {
         this.state = state;
     }
-
     public void setS(String stateInfo) {
         this.stateInfo = stateInfo;
     }
-
     public static  PersonCardType stateOf(int state){
         for (PersonCardType cardType: values()){
             if (cardType.getState()==state){

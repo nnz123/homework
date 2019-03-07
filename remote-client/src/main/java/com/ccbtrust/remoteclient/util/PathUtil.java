@@ -13,7 +13,7 @@ public class PathUtil {
      *  获取图片存储的基本路径，根据操作系统的不同而不同
      */
     public static String getImgBasePath() {
-        String basePath = "";
+        String basePath;
         String os = System.getProperty("os.name");
         if (os.toLowerCase().startsWith("win")) {
             basePath = "D:/ideaWorkspace/image/";

@@ -10,6 +10,7 @@ import org.springframework.util.Assert;
 
 /**
  * 删除员工
+ *
  * @author nzhang
  */
 @Service
@@ -18,16 +19,12 @@ public class PersonDeleteServiceImpl implements PersonDeleteService {
     private PersonDeleteDao personDeleteDao;
 
     @Override
-    public void deleteById(Integer id,String deletePerson){
-        Assert.notNull(deletePerson,"删除人姓名不能为空");
-        Assert.notNull(id,"被删除人的id不能为空");
-            try {
-                 int effectNum = personDeleteDao.deleteById(id,deletePerson);
-                if (effectNum<=0){
-                    throw new PersonException("将要删除的员工不存在！");
-                }
-            }catch (Exception e){
-                throw new PersonException(e.getMessage());
-            }
+    public void deleteById(Integer id, String deletePerson) {
+        Assert.notNull(deletePerson, "删除人姓名不能为空");
+        Assert.notNull(id, "被删除人的id不能为空");
+        int effectNum = personDeleteDao.deleteById(id, deletePerson);
+        if (effectNum <= 0) {
+            throw new PersonException("将要删除的员工不存在！");
+        }
     }
 }

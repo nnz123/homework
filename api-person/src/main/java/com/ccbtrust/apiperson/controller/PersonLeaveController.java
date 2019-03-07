@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-
 /**
  * 员工离职
  * @author nzhang
@@ -22,8 +21,6 @@ public class PersonLeaveController {
     @Autowired
     private PersonLeaveService personLeaveService;
 
-    @Autowired
-    private AmqpTemplate amqpTemplate;
 
     @ApiOperation("员工离职")
     @RequestMapping(value = "/leave/{id}",method = RequestMethod.PUT)
@@ -35,8 +32,6 @@ public class PersonLeaveController {
         } catch (Exception e) {
             return new Result(false,e.getMessage());
         }
-        //向第三方发送离职消息
-        amqpTemplate.convertAndSend("leave","员工id:"+id+"离职");
         return new Result<>(true,null,id+"号员工离职成功！");
     }
 

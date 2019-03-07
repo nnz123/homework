@@ -12,6 +12,7 @@ import org.springframework.util.Assert;
 
 /**
  * 添加操作
+ *
  * @author nzhang
  */
 @Service
@@ -24,22 +25,18 @@ public class PersonInsertServiceImpl implements PersonInsertService {
 
     @Override
     public void addPerson(PersonInsertDTO personInsertDTO) {
-        Assert.notNull(personInsertDTO.getPersonName(),"员工姓名不能为空");
-        Assert.notNull(personInsertDTO.getCardType(),"证件类型不能为空");
-        Assert.notNull(personInsertDTO.getCardNum(),"证件号码不可以为空");
-        Assert.notNull(personInsertDTO.getCreatePerson(),"信息添加人不能为空");
-        try {
-            //通过证件号码判断员工是否已经存在
-            if (personSelectDao.selectByCardNum(personInsertDTO.getCardNum()).size()>=1){
-                throw new PersonException("该员工已经存在!");
-            }
-            //添加员工
-            int effectNum = personInsertDao.insert(personInsertDTO);
-            if (effectNum <= 0) {
-                throw new PersonException("添加员工失败");
-            }
-        }catch (Exception e){
-            throw new PersonException(e.getMessage());
+        Assert.notNull(personInsertDTO.getPersonName(), "员工姓名不能为空");
+        Assert.notNull(personInsertDTO.getCardType(), "证件类型不能为空");
+        Assert.notNull(personInsertDTO.getCardNum(), "证件号码不可以为空");
+        Assert.notNull(personInsertDTO.getCreatePerson(), "信息添加人不能为空");
+        //通过证件号码判断员工是否已经存在
+        if (personSelectDao.selectByCardNum(personInsertDTO.getCardNum()) != null) {
+            throw new PersonException("该员工已经存在!");
+        }
+        //添加员工
+        int effectNum = personInsertDao.insert(personInsertDTO);
+        if (effectNum <= 0) {
+            throw new PersonException("添加员工失败");
         }
     }
 }

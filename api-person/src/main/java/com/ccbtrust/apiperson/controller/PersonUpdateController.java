@@ -10,15 +10,10 @@ import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
-import javax.validation.constraints.Pattern;
 import java.io.File;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * 修改员工信息
- *
  * @author nzhang
  */
 @RestController
@@ -30,7 +25,6 @@ public class PersonUpdateController {
     @ApiOperation("修改员工头像")
     @RequestMapping(value = "/uploadPicture/{id}", method = RequestMethod.PUT)
     public Result uploadPicture(@ApiParam(value = "员工id",required = true) @PathVariable("id") Integer id, @ApiParam(value = "员工的头像", required = true) @RequestParam(value = "mPicture") MultipartFile mPicture) {
-
         //判断头像是否上传
         if (mPicture == null) {
             return new Result<>(false, "必须上传头像");
@@ -55,14 +49,7 @@ public class PersonUpdateController {
         return new Result<>(true, null, id + "号员工头像上传成功！");
     }
 
-    /**
-     * 修改员工基本信息
-     * @param id         员工id
-     * @param personName 员工姓名
-     * @param cardNum    员工证件号码
-     * @param phoneNum   员工电话号码
-     * @return 返回操作是否成功等信息
-     */
+
     @ApiOperation("修改员工基本信息")
     @RequestMapping(value = "/updatePersonInfo/{id}", method = RequestMethod.PUT)
     public Result updatePersonInfo(@ApiParam(value = "员工id",required = true) @PathVariable(value = "id") Integer id, @ApiParam("员工的姓名") @RequestParam(value = "personName", required = false) String personName, @ApiParam("证件类型") @RequestParam(value = "cardType", required = false) PersonCardType cardType, @ApiParam("员工的证件号码") @RequestParam(value = "cardNum", required = false) String cardNum, @ApiParam("员工的电话号码") @RequestParam(value = "phoneNum", required = false) String phoneNum) {
@@ -91,7 +78,6 @@ public class PersonUpdateController {
             }
             personUpdateDTO.setPhoneNum(phoneNum);
         }
-
         try {
             personUpdateService.updatePersonInfo(personUpdateDTO);
         } catch (Exception e) {

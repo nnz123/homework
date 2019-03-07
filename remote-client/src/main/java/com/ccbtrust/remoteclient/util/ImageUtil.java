@@ -18,8 +18,7 @@ public class ImageUtil {
         //获取上传的文件的扩展名
         String extension = getFileExtension(imageName);
         //创建图片的相对目录
-        String fullAddr = PathUtil.getImgBasePath()+realFileName+extension;
-        return fullAddr;
+        return PathUtil.getImgBasePath()+realFileName+extension;
     }
     /**
      * 获取随机文件名

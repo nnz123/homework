@@ -45,7 +45,7 @@ public interface PersonSelectService {
     List<PersonSelectResultDTO> selectAll(@PathVariable("pageNum") Integer pageNum, @PathVariable("pageSize") Integer pageSize);
 
     /**
-     * 通过组合条件查询
+     * 通过组合条件查询员工
      * @param personSelectConditionsDTO 查询条件
      * @return 返回查询结果
      */

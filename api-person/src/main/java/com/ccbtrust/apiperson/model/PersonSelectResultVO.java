@@ -23,22 +23,27 @@ import java.time.LocalDateTime;
 public class PersonSelectResultVO {
     @ApiModelProperty("员工id")
     private Integer       id;
+
     @ApiModelProperty("员工姓名")
     private String        personName;
+
     @ApiModelProperty("证件类型")
     private PersonCardType cardType;
+
     @ApiModelProperty("证件号码")
     private String        cardNum;
+
     @ApiModelProperty("电话号码")
     private String        phoneNum;
+
     @ApiModelProperty("是否在职")
     private PersonStatus personStatus;
+
     @ApiModelProperty("信息添加人")
     private String        createPerson;
+
     @ApiModelProperty("信息添加时间")
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
     private LocalDateTime createTime;
-    // @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    //@JsonSerialize(using = LocalDateTimeSerializer.class)
-    
+
 }

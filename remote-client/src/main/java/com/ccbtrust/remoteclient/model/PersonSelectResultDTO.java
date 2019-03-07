@@ -17,7 +17,6 @@ import java.time.LocalDateTime;
  */
 @Data
 public class PersonSelectResultDTO {
-
     private Integer        id;
     private String         personName;
     private PersonCardType cardType;
@@ -26,13 +25,10 @@ public class PersonSelectResultDTO {
     private String         phoneNum;
     private PersonStatus   personStatus;
     private String         createPerson;
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
     private LocalDateTime  createTime;
     private String         editPerson;
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
     private LocalDateTime  editTime;
     private String         deletePerson;
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
     private LocalDateTime  deleteTime;
     private Integer        deleteFlag;
 

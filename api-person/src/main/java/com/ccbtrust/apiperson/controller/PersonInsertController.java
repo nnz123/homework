@@ -4,10 +4,7 @@ import com.ccbtrust.apiperson.model.PersonInsertVO;
 import com.ccbtrust.remoteclient.client.PersonInsertService;
 import com.ccbtrust.remoteclient.model.PersonInsertDTO;
 import com.ccbtrust.remoteclient.model.Result;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
@@ -15,7 +12,6 @@ import javax.validation.Valid;
 
 /**
  * 添加员工
- *
  * @author nzhang
  */
 @RestController
@@ -34,11 +30,10 @@ public class PersonInsertController {
         personInsertDTO.setCardType(personInsertVO.getCardType());
         personInsertDTO.setCardNum(personInsertVO.getCardNum());
         personInsertDTO.setPhoneNum(personInsertVO.getPhoneNum());
-        //设定头像的存储路径
+        //设定默认头像的存储路径
         personInsertDTO.setPersonPicture("D:\\ideaWorkspace\\image\\default.JPG");
         //设定默认创建人
         personInsertDTO.setCreatePerson("Nancy");
-
         try {
             personInsertService.insert(personInsertDTO);
         } catch (Exception e) {
@@ -46,5 +41,4 @@ public class PersonInsertController {
         }
         return new Result<>(true, null, "员工添加成功！");
     }
-
 }

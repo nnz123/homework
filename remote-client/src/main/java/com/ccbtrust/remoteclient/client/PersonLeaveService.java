@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface PersonLeaveService {
 
     /**
-     * y员工离职
+     * 员工离职
      * @param id 员工id
      * @param editPerson 操作人姓名
      */

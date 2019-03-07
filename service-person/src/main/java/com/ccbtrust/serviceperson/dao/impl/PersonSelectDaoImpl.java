@@ -25,9 +25,8 @@ public class PersonSelectDaoImpl implements PersonSelectDao {
      * @return 查询到的员工信息
      */
     @Override
-    public List<PersonSelectResultDTO> selectById(Integer id) {
-        return dslContext.select().from(PERSON).where(PERSON.ID.eq(id).and(PERSON.DELETE_FLAG.eq(0))).fetchInto(PersonSelectResultDTO.class);
-
+    public PersonSelectResultDTO selectById(Integer id) {
+        return dslContext.select().from(PERSON).where(PERSON.ID.eq(id).and(PERSON.DELETE_FLAG.eq(0))).fetchOneInto(PersonSelectResultDTO.class);
     }
 
     /**
@@ -36,9 +35,8 @@ public class PersonSelectDaoImpl implements PersonSelectDao {
      * @return 查询到的员工信息
      */
     @Override
-    public List<PersonSelectResultDTO> selectByCardNum(String cardNum) {
-       return dslContext.select().from(PERSON).where(PERSON.CARD_NUM.eq(cardNum).and(PERSON.DELETE_FLAG.eq(0))).fetchInto(PersonSelectResultDTO.class);
-
+    public PersonSelectResultDTO selectByCardNum(String cardNum) {
+       return dslContext.select().from(PERSON).where(PERSON.CARD_NUM.eq(cardNum).and(PERSON.DELETE_FLAG.eq(0))).fetchOneInto(PersonSelectResultDTO.class);
     }
 
     /**

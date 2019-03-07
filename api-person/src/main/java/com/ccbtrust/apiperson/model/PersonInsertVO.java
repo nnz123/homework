@@ -8,7 +8,6 @@ import org.hibernate.validator.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
-
 /**
  * @author nzhang
  */
@@ -26,6 +25,7 @@ public class PersonInsertVO {
     @ApiModelProperty(name = "cardNum",value = "证件号码",required = true,example = "130823199001046101")
     @NotBlank(message = "证件号码不能为空")
     private String cardNum;
+
     @ApiModelProperty(name = "phoneNum",value = "电话号码",required = true,example = "13126572786")
     @Pattern(regexp = "^1[3-8][0-9]{9}$",message = "电话号码应该符合电话号码格式要求")
     private String phoneNum;

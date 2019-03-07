@@ -21,19 +21,15 @@ public enum PersonStatus {
         this.state = state;
         this.info = info;
     }
-
     public void setState(int state) {
         this.state = state;
     }
-
     public void setInfo(String info) {
         this.info = info;
     }
-
     public int getState() {
         return state;
     }
-
     public String getInfo() {
         return info;
     }
